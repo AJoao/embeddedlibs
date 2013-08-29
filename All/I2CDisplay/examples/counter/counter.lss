@@ -1,0 +1,2650 @@
+/home/matt/.uecide/compilers/avr-gcc/bin/avr-objdump -h -S /tmp/build-6af651b0-d1ff-495d-b2ef-d66ee4fe88d1/counter.elf 
+
+/tmp/build-6af651b0-d1ff-495d-b2ef-d66ee4fe88d1/counter.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000001a  00800100  00000d92  00000e26  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000d92  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          000000cd  0080011a  00000dac  00000e40  2**0
+                  ALLOC
+  3 .stab         00008f34  00000000  00000000  00000e40  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00011c07  00000000  00000000  00009d74  2**0
+                  CONTENTS, READONLY, DEBUGGING
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 62 00 	jmp	0xc4	; 0xc4 <__ctors_end>
+   4:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+   8:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+   c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  10:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  14:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  18:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  1c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  20:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  24:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  28:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  2c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  30:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  34:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  38:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  3c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  40:	0c 94 76 05 	jmp	0xaec	; 0xaec <__vector_16>
+  44:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  48:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  4c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  50:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  54:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  58:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  5c:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+  60:	0c 94 c7 03 	jmp	0x78e	; 0x78e <__vector_24>
+  64:	0c 94 8a 00 	jmp	0x114	; 0x114 <__bad_interrupt>
+
+00000068 <port_to_mode_PGM>:
+  68:	00 00 00 00 24 00 27 00 2a 00                       ....$.'.*.
+
+00000072 <port_to_output_PGM>:
+  72:	00 00 00 00 25 00 28 00 2b 00                       ....%.(.+.
+
+0000007c <port_to_input_PGM>:
+  7c:	00 00 00 00 23 00 26 00 29 00                       ....#.&.).
+
+00000086 <digital_pin_to_port_PGM>:
+  86:	04 04 04 04 04 04 04 04 02 02 02 02 02 02 03 03     ................
+  96:	03 03 03 03                                         ....
+
+0000009a <digital_pin_to_bit_mask_PGM>:
+  9a:	01 02 04 08 10 20 40 80 01 02 04 08 10 20 01 02     ..... @...... ..
+  aa:	04 08 10 20                                         ... 
+
+000000ae <digital_pin_to_timer_PGM>:
+  ae:	00 00 00 07 00 02 01 00 00 03 04 06 00 00 00 00     ................
+  be:	00 00 00 00                                         ....
+
+000000c2 <__ctors_start>:
+  c2:	63 02       	muls	r22, r19
+
+000000c4 <__ctors_end>:
+  c4:	11 24       	eor	r1, r1
+  c6:	1f be       	out	0x3f, r1	; 63
+  c8:	cf ef       	ldi	r28, 0xFF	; 255
+  ca:	d8 e0       	ldi	r29, 0x08	; 8
+  cc:	de bf       	out	0x3e, r29	; 62
+  ce:	cd bf       	out	0x3d, r28	; 61
+
+000000d0 <__do_copy_data>:
+  d0:	11 e0       	ldi	r17, 0x01	; 1
+  d2:	a0 e0       	ldi	r26, 0x00	; 0
+  d4:	b1 e0       	ldi	r27, 0x01	; 1
+  d6:	e2 e9       	ldi	r30, 0x92	; 146
+  d8:	fd e0       	ldi	r31, 0x0D	; 13
+  da:	02 c0       	rjmp	.+4      	; 0xe0 <.do_copy_data_start>
+
+000000dc <.do_copy_data_loop>:
+  dc:	05 90       	lpm	r0, Z+
+  de:	0d 92       	st	X+, r0
+
+000000e0 <.do_copy_data_start>:
+  e0:	aa 31       	cpi	r26, 0x1A	; 26
+  e2:	b1 07       	cpc	r27, r17
+  e4:	d9 f7       	brne	.-10     	; 0xdc <.do_copy_data_loop>
+
+000000e6 <__do_clear_bss>:
+  e6:	11 e0       	ldi	r17, 0x01	; 1
+  e8:	aa e1       	ldi	r26, 0x1A	; 26
+  ea:	b1 e0       	ldi	r27, 0x01	; 1
+  ec:	01 c0       	rjmp	.+2      	; 0xf0 <.do_clear_bss_start>
+
+000000ee <.do_clear_bss_loop>:
+  ee:	1d 92       	st	X+, r1
+
+000000f0 <.do_clear_bss_start>:
+  f0:	a7 3e       	cpi	r26, 0xE7	; 231
+  f2:	b1 07       	cpc	r27, r17
+  f4:	e1 f7       	brne	.-8      	; 0xee <.do_clear_bss_loop>
+
+000000f6 <__do_global_ctors>:
+  f6:	10 e0       	ldi	r17, 0x00	; 0
+  f8:	c4 ec       	ldi	r28, 0xC4	; 196
+  fa:	d0 e0       	ldi	r29, 0x00	; 0
+  fc:	04 c0       	rjmp	.+8      	; 0x106 <.do_global_ctors_start>
+
+000000fe <.do_global_ctors_loop>:
+  fe:	22 97       	sbiw	r28, 0x02	; 2
+ 100:	fe 01       	movw	r30, r28
+ 102:	0e 94 c3 06 	call	0xd86	; 0xd86 <__tablejump__>
+
+00000106 <.do_global_ctors_start>:
+ 106:	c2 3c       	cpi	r28, 0xC2	; 194
+ 108:	d1 07       	cpc	r29, r17
+ 10a:	c9 f7       	brne	.-14     	; 0xfe <.do_global_ctors_loop>
+ 10c:	0e 94 a6 06 	call	0xd4c	; 0xd4c <main>
+ 110:	0c 94 c7 06 	jmp	0xd8e	; 0xd8e <_exit>
+
+00000114 <__bad_interrupt>:
+ 114:	0c 94 00 00 	jmp	0	; 0x0 <__heap_end>
+
+00000118 <loop>:
+ 118:	8a e1       	ldi	r24, 0x1A	; 26
+ 11a:	91 e0       	ldi	r25, 0x01	; 1
+ 11c:	60 91 1d 01 	lds	r22, 0x011D
+ 120:	0e 94 74 01 	call	0x2e8	; 0x2e8 <_ZN10I2CDisplay8setValueEh>
+ 124:	64 e6       	ldi	r22, 0x64	; 100
+ 126:	70 e0       	ldi	r23, 0x00	; 0
+ 128:	80 e0       	ldi	r24, 0x00	; 0
+ 12a:	90 e0       	ldi	r25, 0x00	; 0
+ 12c:	0e 94 be 05 	call	0xb7c	; 0xb7c <delay>
+ 130:	80 91 1d 01 	lds	r24, 0x011D
+ 134:	8f 5f       	subi	r24, 0xFF	; 255
+ 136:	64 e6       	ldi	r22, 0x64	; 100
+ 138:	0e 94 b5 06 	call	0xd6a	; 0xd6a <__udivmodqi4>
+ 13c:	90 93 1d 01 	sts	0x011D, r25
+ 140:	08 95       	ret
+
+00000142 <setup>:
+ 142:	8a e1       	ldi	r24, 0x1A	; 26
+ 144:	91 e0       	ldi	r25, 0x01	; 1
+ 146:	60 e0       	ldi	r22, 0x00	; 0
+ 148:	0e 94 e7 01 	call	0x3ce	; 0x3ce <_ZN10I2CDisplay5beginEh>
+ 14c:	08 95       	ret
+
+0000014e <_ZL8wiresendh>:
+ #include "Arduino.h"
+#else
+ #include "WProgram.h"
+#endif
+
+static inline void wiresend(unsigned char x) {
+ 14e:	68 2f       	mov	r22, r24
+#if ARDUINO >= 100
+  Wire.write((unsigned char)x);
+ 150:	84 e6       	ldi	r24, 0x64	; 100
+ 152:	91 e0       	ldi	r25, 0x01	; 1
+ 154:	0e 94 ab 02 	call	0x556	; 0x556 <_ZN7TwoWire5writeEh>
+#else
+  Wire.send(x);
+#endif
+}
+ 158:	08 95       	ret
+
+0000015a <_ZN10I2CDisplay12digitalWriteEhh>:
+  wiresend(ba & 0xFF);
+  wiresend(ba >> 8);
+  Wire.endTransmission();
+}
+
+void I2CDisplay::digitalWrite(unsigned char p, uint8_t d) {
+ 15a:	ef 92       	push	r14
+ 15c:	ff 92       	push	r15
+ 15e:	0f 93       	push	r16
+ 160:	1f 93       	push	r17
+ 162:	cf 93       	push	r28
+ 164:	df 93       	push	r29
+ 166:	ec 01       	movw	r28, r24
+ 168:	16 2f       	mov	r17, r22
+ 16a:	e4 2e       	mov	r14, r20
+  unsigned char gpio;
+  unsigned char gpioaddr, olataddr;
+
+  // only 16 bits!
+  if (p > 15)
+ 16c:	60 31       	cpi	r22, 0x10	; 16
+ 16e:	08 f0       	brcs	.+2      	; 0x172 <_ZN10I2CDisplay12digitalWriteEhh+0x18>
+ 170:	4e c0       	rjmp	.+156    	; 0x20e <_ZN10I2CDisplay12digitalWriteEhh+0xb4>
+    return;
+
+  if (p < 8) {
+ 172:	68 30       	cpi	r22, 0x08	; 8
+ 174:	20 f4       	brcc	.+8      	; 0x17e <_ZN10I2CDisplay12digitalWriteEhh+0x24>
+ 176:	92 e1       	ldi	r25, 0x12	; 18
+ 178:	f9 2e       	mov	r15, r25
+ 17a:	04 e1       	ldi	r16, 0x14	; 20
+ 17c:	04 c0       	rjmp	.+8      	; 0x186 <_ZN10I2CDisplay12digitalWriteEhh+0x2c>
+    olataddr = MCP23017_OLATA;
+    gpioaddr = MCP23017_GPIOA;
+  } else {
+    olataddr = MCP23017_OLATB;
+    gpioaddr = MCP23017_GPIOB;
+    p -= 8;
+ 17e:	18 50       	subi	r17, 0x08	; 8
+ 180:	83 e1       	ldi	r24, 0x13	; 19
+ 182:	f8 2e       	mov	r15, r24
+ 184:	05 e1       	ldi	r16, 0x15	; 21
+  }
+
+  // read the current GPIO output latches
+  Wire.beginTransmission(MCP23017_ADDRESS | i2caddr);
+ 186:	68 81       	ld	r22, Y
+ 188:	60 62       	ori	r22, 0x20	; 32
+ 18a:	84 e6       	ldi	r24, 0x64	; 100
+ 18c:	91 e0       	ldi	r25, 0x01	; 1
+ 18e:	70 e0       	ldi	r23, 0x00	; 0
+ 190:	0e 94 29 02 	call	0x452	; 0x452 <_ZN7TwoWire17beginTransmissionEi>
+  wiresend(olataddr);	
+ 194:	80 2f       	mov	r24, r16
+ 196:	0e 94 a7 00 	call	0x14e	; 0x14e <_ZL8wiresendh>
+  Wire.endTransmission();
+ 19a:	84 e6       	ldi	r24, 0x64	; 100
+ 19c:	91 e0       	ldi	r25, 0x01	; 1
+ 19e:	0e 94 ee 02 	call	0x5dc	; 0x5dc <_ZN7TwoWire15endTransmissionEv>
+  
+  Wire.requestFrom(MCP23017_ADDRESS | i2caddr, 1);
+ 1a2:	68 81       	ld	r22, Y
+ 1a4:	60 62       	ori	r22, 0x20	; 32
+ 1a6:	84 e6       	ldi	r24, 0x64	; 100
+ 1a8:	91 e0       	ldi	r25, 0x01	; 1
+ 1aa:	70 e0       	ldi	r23, 0x00	; 0
+ 1ac:	41 e0       	ldi	r20, 0x01	; 1
+ 1ae:	50 e0       	ldi	r21, 0x00	; 0
+ 1b0:	0e 94 ff 02 	call	0x5fe	; 0x5fe <_ZN7TwoWire11requestFromEii>
+#endif
+}
+
+static inline unsigned char wirerecv(void) {
+#if ARDUINO >= 100
+  return Wire.read();
+ 1b4:	84 e6       	ldi	r24, 0x64	; 100
+ 1b6:	91 e0       	ldi	r25, 0x01	; 1
+ 1b8:	0e 94 3c 02 	call	0x478	; 0x478 <_ZN7TwoWire4readEv>
+ 1bc:	28 2f       	mov	r18, r24
+  
+  Wire.requestFrom(MCP23017_ADDRESS | i2caddr, 1);
+   gpio = wirerecv();
+
+  // set the pin and direction
+  if (d == HIGH) {
+ 1be:	81 e0       	ldi	r24, 0x01	; 1
+ 1c0:	e8 16       	cp	r14, r24
+ 1c2:	51 f4       	brne	.+20     	; 0x1d8 <_ZN10I2CDisplay12digitalWriteEhh+0x7e>
+    gpio |= 1 << p; 
+ 1c4:	81 e0       	ldi	r24, 0x01	; 1
+ 1c6:	90 e0       	ldi	r25, 0x00	; 0
+ 1c8:	02 c0       	rjmp	.+4      	; 0x1ce <_ZN10I2CDisplay12digitalWriteEhh+0x74>
+ 1ca:	88 0f       	add	r24, r24
+ 1cc:	99 1f       	adc	r25, r25
+ 1ce:	1a 95       	dec	r17
+ 1d0:	e2 f7       	brpl	.-8      	; 0x1ca <_ZN10I2CDisplay12digitalWriteEhh+0x70>
+ 1d2:	12 2f       	mov	r17, r18
+ 1d4:	18 2b       	or	r17, r24
+ 1d6:	0a c0       	rjmp	.+20     	; 0x1ec <_ZN10I2CDisplay12digitalWriteEhh+0x92>
+  } else {
+    gpio &= ~(1 << p);
+ 1d8:	81 e0       	ldi	r24, 0x01	; 1
+ 1da:	90 e0       	ldi	r25, 0x00	; 0
+ 1dc:	02 c0       	rjmp	.+4      	; 0x1e2 <_ZN10I2CDisplay12digitalWriteEhh+0x88>
+ 1de:	88 0f       	add	r24, r24
+ 1e0:	99 1f       	adc	r25, r25
+ 1e2:	1a 95       	dec	r17
+ 1e4:	e2 f7       	brpl	.-8      	; 0x1de <_ZN10I2CDisplay12digitalWriteEhh+0x84>
+ 1e6:	18 2f       	mov	r17, r24
+ 1e8:	10 95       	com	r17
+ 1ea:	12 23       	and	r17, r18
+  }
+
+  // write the new GPIO
+  Wire.beginTransmission(MCP23017_ADDRESS | i2caddr);
+ 1ec:	68 81       	ld	r22, Y
+ 1ee:	60 62       	ori	r22, 0x20	; 32
+ 1f0:	84 e6       	ldi	r24, 0x64	; 100
+ 1f2:	91 e0       	ldi	r25, 0x01	; 1
+ 1f4:	70 e0       	ldi	r23, 0x00	; 0
+ 1f6:	0e 94 29 02 	call	0x452	; 0x452 <_ZN7TwoWire17beginTransmissionEi>
+  wiresend(gpioaddr);
+ 1fa:	8f 2d       	mov	r24, r15
+ 1fc:	0e 94 a7 00 	call	0x14e	; 0x14e <_ZL8wiresendh>
+  wiresend(gpio);	
+ 200:	81 2f       	mov	r24, r17
+ 202:	0e 94 a7 00 	call	0x14e	; 0x14e <_ZL8wiresendh>
+  Wire.endTransmission();
+ 206:	84 e6       	ldi	r24, 0x64	; 100
+ 208:	91 e0       	ldi	r25, 0x01	; 1
+ 20a:	0e 94 ee 02 	call	0x5dc	; 0x5dc <_ZN7TwoWire15endTransmissionEv>
+}
+ 20e:	df 91       	pop	r29
+ 210:	cf 91       	pop	r28
+ 212:	1f 91       	pop	r17
+ 214:	0f 91       	pop	r16
+ 216:	ff 90       	pop	r15
+ 218:	ef 90       	pop	r14
+ 21a:	08 95       	ret
+
+0000021c <_ZN10I2CDisplay13setRightDigitEh>:
+  for (i=0; i<8; i++) {
+    this->digitalWrite(i, d & (1 << i) ? HIGH : LOW);
+  }
+}
+
+void I2CDisplay::setRightDigit(unsigned char d) {
+ 21c:	ef 92       	push	r14
+ 21e:	ff 92       	push	r15
+ 220:	0f 93       	push	r16
+ 222:	1f 93       	push	r17
+ 224:	cf 93       	push	r28
+ 226:	df 93       	push	r29
+ 228:	7c 01       	movw	r14, r24
+ 22a:	86 2f       	mov	r24, r22
+  unsigned char i;
+  d = d % 10;
+  d = digits[d];
+ 22c:	6a e0       	ldi	r22, 0x0A	; 10
+ 22e:	0e 94 b5 06 	call	0xd6a	; 0xd6a <__udivmodqi4>
+ 232:	e9 2f       	mov	r30, r25
+ 234:	f0 e0       	ldi	r31, 0x00	; 0
+  d |= this->rightDecimal ? 1 : 0;
+ 236:	e0 50       	subi	r30, 0x00	; 0
+ 238:	ff 4f       	sbci	r31, 0xFF	; 255
+ 23a:	40 e0       	ldi	r20, 0x00	; 0
+ 23c:	d7 01       	movw	r26, r14
+ 23e:	12 96       	adiw	r26, 0x02	; 2
+ 240:	8c 91       	ld	r24, X
+ 242:	81 11       	cpse	r24, r1
+ 244:	41 e0       	ldi	r20, 0x01	; 1
+ 246:	80 81       	ld	r24, Z
+ 248:	48 2b       	or	r20, r24
+ 24a:	c0 e0       	ldi	r28, 0x00	; 0
+ 24c:	d0 e0       	ldi	r29, 0x00	; 0
+  for (i=0; i<8; i++) {
+    this->digitalWrite(8 + i, d & (1 << i) ? HIGH : LOW);
+ 24e:	04 2f       	mov	r16, r20
+ 250:	10 e0       	ldi	r17, 0x00	; 0
+ 252:	ce 01       	movw	r24, r28
+ 254:	88 5f       	subi	r24, 0xF8	; 248
+ 256:	68 2f       	mov	r22, r24
+ 258:	a8 01       	movw	r20, r16
+ 25a:	0c 2e       	mov	r0, r28
+ 25c:	02 c0       	rjmp	.+4      	; 0x262 <_ZN10I2CDisplay13setRightDigitEh+0x46>
+ 25e:	55 95       	asr	r21
+ 260:	47 95       	ror	r20
+ 262:	0a 94       	dec	r0
+ 264:	e2 f7       	brpl	.-8      	; 0x25e <_ZN10I2CDisplay13setRightDigitEh+0x42>
+ 266:	41 70       	andi	r20, 0x01	; 1
+ 268:	c7 01       	movw	r24, r14
+ 26a:	0e 94 ad 00 	call	0x15a	; 0x15a <_ZN10I2CDisplay12digitalWriteEhh>
+ 26e:	21 96       	adiw	r28, 0x01	; 1
+void I2CDisplay::setRightDigit(unsigned char d) {
+  unsigned char i;
+  d = d % 10;
+  d = digits[d];
+  d |= this->rightDecimal ? 1 : 0;
+  for (i=0; i<8; i++) {
+ 270:	c8 30       	cpi	r28, 0x08	; 8
+ 272:	d1 05       	cpc	r29, r1
+ 274:	71 f7       	brne	.-36     	; 0x252 <_ZN10I2CDisplay13setRightDigitEh+0x36>
+    this->digitalWrite(8 + i, d & (1 << i) ? HIGH : LOW);
+  }
+}
+ 276:	df 91       	pop	r29
+ 278:	cf 91       	pop	r28
+ 27a:	1f 91       	pop	r17
+ 27c:	0f 91       	pop	r16
+ 27e:	ff 90       	pop	r15
+ 280:	ef 90       	pop	r14
+ 282:	08 95       	ret
+
+00000284 <_ZN10I2CDisplay12setLeftDigitEh>:
+  
+  Wire.requestFrom(MCP23017_ADDRESS | i2caddr, 1);
+  return (wirerecv() >> p) & 0x1;
+}
+
+void I2CDisplay::setLeftDigit(unsigned char d) {
+ 284:	ef 92       	push	r14
+ 286:	ff 92       	push	r15
+ 288:	0f 93       	push	r16
+ 28a:	1f 93       	push	r17
+ 28c:	cf 93       	push	r28
+ 28e:	df 93       	push	r29
+ 290:	7c 01       	movw	r14, r24
+ 292:	86 2f       	mov	r24, r22
+  unsigned char i;
+  d = d % 10;
+  d = digits[d];
+ 294:	6a e0       	ldi	r22, 0x0A	; 10
+ 296:	0e 94 b5 06 	call	0xd6a	; 0xd6a <__udivmodqi4>
+ 29a:	e9 2f       	mov	r30, r25
+ 29c:	f0 e0       	ldi	r31, 0x00	; 0
+  d |= this->leftDecimal ? 1 : 0;
+ 29e:	e0 50       	subi	r30, 0x00	; 0
+ 2a0:	ff 4f       	sbci	r31, 0xFF	; 255
+ 2a2:	40 e0       	ldi	r20, 0x00	; 0
+ 2a4:	d7 01       	movw	r26, r14
+ 2a6:	11 96       	adiw	r26, 0x01	; 1
+ 2a8:	8c 91       	ld	r24, X
+ 2aa:	81 11       	cpse	r24, r1
+ 2ac:	41 e0       	ldi	r20, 0x01	; 1
+ 2ae:	80 81       	ld	r24, Z
+ 2b0:	48 2b       	or	r20, r24
+ 2b2:	c0 e0       	ldi	r28, 0x00	; 0
+ 2b4:	d0 e0       	ldi	r29, 0x00	; 0
+  for (i=0; i<8; i++) {
+    this->digitalWrite(i, d & (1 << i) ? HIGH : LOW);
+ 2b6:	04 2f       	mov	r16, r20
+ 2b8:	10 e0       	ldi	r17, 0x00	; 0
+ 2ba:	a8 01       	movw	r20, r16
+ 2bc:	0c 2e       	mov	r0, r28
+ 2be:	02 c0       	rjmp	.+4      	; 0x2c4 <_ZN10I2CDisplay12setLeftDigitEh+0x40>
+ 2c0:	55 95       	asr	r21
+ 2c2:	47 95       	ror	r20
+ 2c4:	0a 94       	dec	r0
+ 2c6:	e2 f7       	brpl	.-8      	; 0x2c0 <_ZN10I2CDisplay12setLeftDigitEh+0x3c>
+ 2c8:	41 70       	andi	r20, 0x01	; 1
+ 2ca:	c7 01       	movw	r24, r14
+ 2cc:	6c 2f       	mov	r22, r28
+ 2ce:	0e 94 ad 00 	call	0x15a	; 0x15a <_ZN10I2CDisplay12digitalWriteEhh>
+ 2d2:	21 96       	adiw	r28, 0x01	; 1
+void I2CDisplay::setLeftDigit(unsigned char d) {
+  unsigned char i;
+  d = d % 10;
+  d = digits[d];
+  d |= this->leftDecimal ? 1 : 0;
+  for (i=0; i<8; i++) {
+ 2d4:	c8 30       	cpi	r28, 0x08	; 8
+ 2d6:	d1 05       	cpc	r29, r1
+ 2d8:	81 f7       	brne	.-32     	; 0x2ba <_ZN10I2CDisplay12setLeftDigitEh+0x36>
+    this->digitalWrite(i, d & (1 << i) ? HIGH : LOW);
+  }
+}
+ 2da:	df 91       	pop	r29
+ 2dc:	cf 91       	pop	r28
+ 2de:	1f 91       	pop	r17
+ 2e0:	0f 91       	pop	r16
+ 2e2:	ff 90       	pop	r15
+ 2e4:	ef 90       	pop	r14
+ 2e6:	08 95       	ret
+
+000002e8 <_ZN10I2CDisplay8setValueEh>:
+  for (i=0; i<8; i++) {
+    this->digitalWrite(8 + i, d & (1 << i) ? HIGH : LOW);
+  }
+}
+
+void I2CDisplay::setValue(unsigned char d) {
+ 2e8:	ff 92       	push	r15
+ 2ea:	0f 93       	push	r16
+ 2ec:	1f 93       	push	r17
+ 2ee:	8c 01       	movw	r16, r24
+ 2f0:	f6 2e       	mov	r15, r22
+    this->setLeftDigit(d / 10);
+ 2f2:	86 2f       	mov	r24, r22
+ 2f4:	6a e0       	ldi	r22, 0x0A	; 10
+ 2f6:	0e 94 b5 06 	call	0xd6a	; 0xd6a <__udivmodqi4>
+ 2fa:	68 2f       	mov	r22, r24
+ 2fc:	c8 01       	movw	r24, r16
+ 2fe:	0e 94 42 01 	call	0x284	; 0x284 <_ZN10I2CDisplay12setLeftDigitEh>
+    this->setRightDigit(d % 10);
+ 302:	8f 2d       	mov	r24, r15
+ 304:	6a e0       	ldi	r22, 0x0A	; 10
+ 306:	0e 94 b5 06 	call	0xd6a	; 0xd6a <__udivmodqi4>
+ 30a:	69 2f       	mov	r22, r25
+ 30c:	c8 01       	movw	r24, r16
+ 30e:	0e 94 0e 01 	call	0x21c	; 0x21c <_ZN10I2CDisplay13setRightDigitEh>
+}
+ 312:	1f 91       	pop	r17
+ 314:	0f 91       	pop	r16
+ 316:	ff 90       	pop	r15
+ 318:	08 95       	ret
+
+0000031a <_ZN10I2CDisplay7pinModeEhh>:
+
+void I2CDisplay::begin(void) {
+  begin(0);
+}
+
+void I2CDisplay::pinMode(unsigned char p, unsigned char d) {
+ 31a:	ff 92       	push	r15
+ 31c:	0f 93       	push	r16
+ 31e:	1f 93       	push	r17
+ 320:	cf 93       	push	r28
+ 322:	df 93       	push	r29
+ 324:	ec 01       	movw	r28, r24
+ 326:	16 2f       	mov	r17, r22
+ 328:	f4 2e       	mov	r15, r20
+  unsigned char iodir;
+  unsigned char iodiraddr;
+
+  // only 16 bits!
+  if (p > 15)
+ 32a:	60 31       	cpi	r22, 0x10	; 16
+ 32c:	08 f0       	brcs	.+2      	; 0x330 <_ZN10I2CDisplay7pinModeEhh+0x16>
+ 32e:	49 c0       	rjmp	.+146    	; 0x3c2 <_ZN10I2CDisplay7pinModeEhh+0xa8>
+    return;
+
+  if (p < 8)
+ 330:	68 30       	cpi	r22, 0x08	; 8
+ 332:	10 f4       	brcc	.+4      	; 0x338 <_ZN10I2CDisplay7pinModeEhh+0x1e>
+ 334:	00 e0       	ldi	r16, 0x00	; 0
+ 336:	02 c0       	rjmp	.+4      	; 0x33c <_ZN10I2CDisplay7pinModeEhh+0x22>
+    iodiraddr = MCP23017_IODIRA;
+  else {
+    iodiraddr = MCP23017_IODIRB;
+    p -= 8;
+ 338:	18 50       	subi	r17, 0x08	; 8
+ 33a:	01 e0       	ldi	r16, 0x01	; 1
+  }
+
+  // read the current IODIR
+  Wire.beginTransmission(MCP23017_ADDRESS | i2caddr);
+ 33c:	68 81       	ld	r22, Y
+ 33e:	60 62       	ori	r22, 0x20	; 32
+ 340:	84 e6       	ldi	r24, 0x64	; 100
+ 342:	91 e0       	ldi	r25, 0x01	; 1
+ 344:	70 e0       	ldi	r23, 0x00	; 0
+ 346:	0e 94 29 02 	call	0x452	; 0x452 <_ZN7TwoWire17beginTransmissionEi>
+  wiresend(iodiraddr);	
+ 34a:	80 2f       	mov	r24, r16
+ 34c:	0e 94 a7 00 	call	0x14e	; 0x14e <_ZL8wiresendh>
+  Wire.endTransmission();
+ 350:	84 e6       	ldi	r24, 0x64	; 100
+ 352:	91 e0       	ldi	r25, 0x01	; 1
+ 354:	0e 94 ee 02 	call	0x5dc	; 0x5dc <_ZN7TwoWire15endTransmissionEv>
+  
+  Wire.requestFrom(MCP23017_ADDRESS | i2caddr, 1);
+ 358:	68 81       	ld	r22, Y
+ 35a:	60 62       	ori	r22, 0x20	; 32
+ 35c:	84 e6       	ldi	r24, 0x64	; 100
+ 35e:	91 e0       	ldi	r25, 0x01	; 1
+ 360:	70 e0       	ldi	r23, 0x00	; 0
+ 362:	41 e0       	ldi	r20, 0x01	; 1
+ 364:	50 e0       	ldi	r21, 0x00	; 0
+ 366:	0e 94 ff 02 	call	0x5fe	; 0x5fe <_ZN7TwoWire11requestFromEii>
+#endif
+}
+
+static inline unsigned char wirerecv(void) {
+#if ARDUINO >= 100
+  return Wire.read();
+ 36a:	84 e6       	ldi	r24, 0x64	; 100
+ 36c:	91 e0       	ldi	r25, 0x01	; 1
+ 36e:	0e 94 3c 02 	call	0x478	; 0x478 <_ZN7TwoWire4readEv>
+ 372:	28 2f       	mov	r18, r24
+  
+  Wire.requestFrom(MCP23017_ADDRESS | i2caddr, 1);
+  iodir = wirerecv();
+
+  // set the pin and direction
+  if (d == INPUT) {
+ 374:	ff 20       	and	r15, r15
+ 376:	51 f4       	brne	.+20     	; 0x38c <_ZN10I2CDisplay7pinModeEhh+0x72>
+    iodir |= 1 << p; 
+ 378:	81 e0       	ldi	r24, 0x01	; 1
+ 37a:	90 e0       	ldi	r25, 0x00	; 0
+ 37c:	02 c0       	rjmp	.+4      	; 0x382 <_ZN10I2CDisplay7pinModeEhh+0x68>
+ 37e:	88 0f       	add	r24, r24
+ 380:	99 1f       	adc	r25, r25
+ 382:	1a 95       	dec	r17
+ 384:	e2 f7       	brpl	.-8      	; 0x37e <_ZN10I2CDisplay7pinModeEhh+0x64>
+ 386:	12 2f       	mov	r17, r18
+ 388:	18 2b       	or	r17, r24
+ 38a:	0a c0       	rjmp	.+20     	; 0x3a0 <_ZN10I2CDisplay7pinModeEhh+0x86>
+  } else {
+    iodir &= ~(1 << p);
+ 38c:	81 e0       	ldi	r24, 0x01	; 1
+ 38e:	90 e0       	ldi	r25, 0x00	; 0
+ 390:	02 c0       	rjmp	.+4      	; 0x396 <_ZN10I2CDisplay7pinModeEhh+0x7c>
+ 392:	88 0f       	add	r24, r24
+ 394:	99 1f       	adc	r25, r25
+ 396:	1a 95       	dec	r17
+ 398:	e2 f7       	brpl	.-8      	; 0x392 <_ZN10I2CDisplay7pinModeEhh+0x78>
+ 39a:	18 2f       	mov	r17, r24
+ 39c:	10 95       	com	r17
+ 39e:	12 23       	and	r17, r18
+  }
+
+  // write the new IODIR
+  Wire.beginTransmission(MCP23017_ADDRESS | i2caddr);
+ 3a0:	68 81       	ld	r22, Y
+ 3a2:	60 62       	ori	r22, 0x20	; 32
+ 3a4:	84 e6       	ldi	r24, 0x64	; 100
+ 3a6:	91 e0       	ldi	r25, 0x01	; 1
+ 3a8:	70 e0       	ldi	r23, 0x00	; 0
+ 3aa:	0e 94 29 02 	call	0x452	; 0x452 <_ZN7TwoWire17beginTransmissionEi>
+  wiresend(iodiraddr);
+ 3ae:	80 2f       	mov	r24, r16
+ 3b0:	0e 94 a7 00 	call	0x14e	; 0x14e <_ZL8wiresendh>
+  wiresend(iodir);	
+ 3b4:	81 2f       	mov	r24, r17
+ 3b6:	0e 94 a7 00 	call	0x14e	; 0x14e <_ZL8wiresendh>
+  Wire.endTransmission();
+ 3ba:	84 e6       	ldi	r24, 0x64	; 100
+ 3bc:	91 e0       	ldi	r25, 0x01	; 1
+ 3be:	0e 94 ee 02 	call	0x5dc	; 0x5dc <_ZN7TwoWire15endTransmissionEv>
+}
+ 3c2:	df 91       	pop	r29
+ 3c4:	cf 91       	pop	r28
+ 3c6:	1f 91       	pop	r17
+ 3c8:	0f 91       	pop	r16
+ 3ca:	ff 90       	pop	r15
+ 3cc:	08 95       	ret
+
+000003ce <_ZN10I2CDisplay5beginEh>:
+  0b11110110,
+};
+
+////////////////////////////////////////////////////////////////////////////////
+
+void I2CDisplay::begin(unsigned char addr) {
+ 3ce:	1f 93       	push	r17
+ 3d0:	cf 93       	push	r28
+ 3d2:	df 93       	push	r29
+ 3d4:	ec 01       	movw	r28, r24
+  unsigned char i;
+
+  if (addr > 7) {
+    addr = 7;
+  }
+  i2caddr = addr;
+ 3d6:	68 30       	cpi	r22, 0x08	; 8
+ 3d8:	08 f0       	brcs	.+2      	; 0x3dc <_ZN10I2CDisplay5beginEh+0xe>
+ 3da:	67 e0       	ldi	r22, 0x07	; 7
+ 3dc:	68 83       	st	Y, r22
+
+  Wire.begin();
+ 3de:	84 e6       	ldi	r24, 0x64	; 100
+ 3e0:	91 e0       	ldi	r25, 0x01	; 1
+ 3e2:	0e 94 03 03 	call	0x606	; 0x606 <_ZN7TwoWire5beginEv>
+
+  
+  // set defaults!
+  Wire.beginTransmission(MCP23017_ADDRESS | i2caddr);
+ 3e6:	68 81       	ld	r22, Y
+ 3e8:	60 62       	ori	r22, 0x20	; 32
+ 3ea:	84 e6       	ldi	r24, 0x64	; 100
+ 3ec:	91 e0       	ldi	r25, 0x01	; 1
+ 3ee:	70 e0       	ldi	r23, 0x00	; 0
+ 3f0:	0e 94 29 02 	call	0x452	; 0x452 <_ZN7TwoWire17beginTransmissionEi>
+  wiresend(MCP23017_IODIRA);
+ 3f4:	80 e0       	ldi	r24, 0x00	; 0
+ 3f6:	0e 94 a7 00 	call	0x14e	; 0x14e <_ZL8wiresendh>
+  wiresend(0xFF);  // all inputs on port A
+ 3fa:	8f ef       	ldi	r24, 0xFF	; 255
+ 3fc:	0e 94 a7 00 	call	0x14e	; 0x14e <_ZL8wiresendh>
+  Wire.endTransmission();
+ 400:	84 e6       	ldi	r24, 0x64	; 100
+ 402:	91 e0       	ldi	r25, 0x01	; 1
+ 404:	0e 94 ee 02 	call	0x5dc	; 0x5dc <_ZN7TwoWire15endTransmissionEv>
+
+  Wire.beginTransmission(MCP23017_ADDRESS | i2caddr);
+ 408:	68 81       	ld	r22, Y
+ 40a:	60 62       	ori	r22, 0x20	; 32
+ 40c:	84 e6       	ldi	r24, 0x64	; 100
+ 40e:	91 e0       	ldi	r25, 0x01	; 1
+ 410:	70 e0       	ldi	r23, 0x00	; 0
+ 412:	0e 94 29 02 	call	0x452	; 0x452 <_ZN7TwoWire17beginTransmissionEi>
+  wiresend(MCP23017_IODIRB);
+ 416:	81 e0       	ldi	r24, 0x01	; 1
+ 418:	0e 94 a7 00 	call	0x14e	; 0x14e <_ZL8wiresendh>
+  wiresend(0xFF);  // all inputs on port B
+ 41c:	8f ef       	ldi	r24, 0xFF	; 255
+ 41e:	0e 94 a7 00 	call	0x14e	; 0x14e <_ZL8wiresendh>
+  Wire.endTransmission();
+ 422:	84 e6       	ldi	r24, 0x64	; 100
+ 424:	91 e0       	ldi	r25, 0x01	; 1
+ 426:	0e 94 ee 02 	call	0x5dc	; 0x5dc <_ZN7TwoWire15endTransmissionEv>
+ 42a:	10 e0       	ldi	r17, 0x00	; 0
+
+  for (i=0; i<16; i++) {
+    this->pinMode(i, OUTPUT);
+ 42c:	ce 01       	movw	r24, r28
+ 42e:	61 2f       	mov	r22, r17
+ 430:	41 e0       	ldi	r20, 0x01	; 1
+ 432:	0e 94 8d 01 	call	0x31a	; 0x31a <_ZN10I2CDisplay7pinModeEhh>
+    this->digitalWrite(i, LOW);
+ 436:	ce 01       	movw	r24, r28
+ 438:	61 2f       	mov	r22, r17
+ 43a:	40 e0       	ldi	r20, 0x00	; 0
+ 43c:	0e 94 ad 00 	call	0x15a	; 0x15a <_ZN10I2CDisplay12digitalWriteEhh>
+  Wire.beginTransmission(MCP23017_ADDRESS | i2caddr);
+  wiresend(MCP23017_IODIRB);
+  wiresend(0xFF);  // all inputs on port B
+  Wire.endTransmission();
+
+  for (i=0; i<16; i++) {
+ 440:	1f 5f       	subi	r17, 0xFF	; 255
+ 442:	10 31       	cpi	r17, 0x10	; 16
+ 444:	99 f7       	brne	.-26     	; 0x42c <_ZN10I2CDisplay5beginEh+0x5e>
+    this->pinMode(i, OUTPUT);
+    this->digitalWrite(i, LOW);
+  }
+  this->leftDecimal = LOW;
+ 446:	19 82       	std	Y+1, r1	; 0x01
+  this->rightDecimal = LOW;
+ 448:	1a 82       	std	Y+2, r1	; 0x02
+}
+ 44a:	df 91       	pop	r29
+ 44c:	cf 91       	pop	r28
+ 44e:	1f 91       	pop	r17
+ 450:	08 95       	ret
+
+00000452 <_ZN7TwoWire17beginTransmissionEi>:
+}
+
+void TwoWire::beginTransmission(uint8_t address)
+{
+  // indicate that we are transmitting
+  transmitting = 1;
+ 452:	81 e0       	ldi	r24, 0x01	; 1
+ 454:	80 93 63 01 	sts	0x0163, r24
+  // set address of targeted slave
+  txAddress = address;
+ 458:	60 93 40 01 	sts	0x0140, r22
+  // reset tx buffer iterator vars
+  txBufferIndex = 0;
+ 45c:	10 92 61 01 	sts	0x0161, r1
+  txBufferLength = 0;
+ 460:	10 92 62 01 	sts	0x0162, r1
+}
+
+void TwoWire::beginTransmission(int address)
+{
+  beginTransmission((uint8_t)address);
+}
+ 464:	08 95       	ret
+
+00000466 <_ZN7TwoWire9availableEv>:
+}
+
+// must be called in:
+// slave rx event callback
+// or after requestFrom(address, numBytes)
+int TwoWire::available(void)
+ 466:	20 91 3f 01 	lds	r18, 0x013F
+ 46a:	30 e0       	ldi	r19, 0x00	; 0
+ 46c:	80 91 3e 01 	lds	r24, 0x013E
+ 470:	28 1b       	sub	r18, r24
+ 472:	31 09       	sbc	r19, r1
+{
+  return rxBufferLength - rxBufferIndex;
+}
+ 474:	c9 01       	movw	r24, r18
+ 476:	08 95       	ret
+
+00000478 <_ZN7TwoWire4readEv>:
+int TwoWire::read(void)
+{
+  int value = -1;
+  
+  // get each successive byte on each call
+  if(rxBufferIndex < rxBufferLength){
+ 478:	40 91 3e 01 	lds	r20, 0x013E
+ 47c:	80 91 3f 01 	lds	r24, 0x013F
+ 480:	48 17       	cp	r20, r24
+ 482:	18 f0       	brcs	.+6      	; 0x48a <_ZN7TwoWire4readEv+0x12>
+ 484:	2f ef       	ldi	r18, 0xFF	; 255
+ 486:	3f ef       	ldi	r19, 0xFF	; 255
+ 488:	0a c0       	rjmp	.+20     	; 0x49e <_ZN7TwoWire4readEv+0x26>
+    value = rxBuffer[rxBufferIndex];
+ 48a:	e4 2f       	mov	r30, r20
+ 48c:	f0 e0       	ldi	r31, 0x00	; 0
+ 48e:	e2 5e       	subi	r30, 0xE2	; 226
+ 490:	fe 4f       	sbci	r31, 0xFE	; 254
+ 492:	80 81       	ld	r24, Z
+ 494:	28 2f       	mov	r18, r24
+ 496:	30 e0       	ldi	r19, 0x00	; 0
+    ++rxBufferIndex;
+ 498:	4f 5f       	subi	r20, 0xFF	; 255
+ 49a:	40 93 3e 01 	sts	0x013E, r20
+  }
+
+  return value;
+}
+ 49e:	c9 01       	movw	r24, r18
+ 4a0:	08 95       	ret
+
+000004a2 <_ZN7TwoWire4peekEv>:
+// or after requestFrom(address, numBytes)
+int TwoWire::peek(void)
+{
+  int value = -1;
+  
+  if(rxBufferIndex < rxBufferLength){
+ 4a2:	e0 91 3e 01 	lds	r30, 0x013E
+ 4a6:	80 91 3f 01 	lds	r24, 0x013F
+ 4aa:	e8 17       	cp	r30, r24
+ 4ac:	18 f0       	brcs	.+6      	; 0x4b4 <_ZN7TwoWire4peekEv+0x12>
+ 4ae:	ef ef       	ldi	r30, 0xFF	; 255
+ 4b0:	ff ef       	ldi	r31, 0xFF	; 255
+ 4b2:	06 c0       	rjmp	.+12     	; 0x4c0 <_ZN7TwoWire4peekEv+0x1e>
+    value = rxBuffer[rxBufferIndex];
+ 4b4:	f0 e0       	ldi	r31, 0x00	; 0
+ 4b6:	e2 5e       	subi	r30, 0xE2	; 226
+ 4b8:	fe 4f       	sbci	r31, 0xFE	; 254
+ 4ba:	80 81       	ld	r24, Z
+ 4bc:	e8 2f       	mov	r30, r24
+ 4be:	f0 e0       	ldi	r31, 0x00	; 0
+  }
+
+  return value;
+}
+ 4c0:	cf 01       	movw	r24, r30
+ 4c2:	08 95       	ret
+
+000004c4 <_ZN7TwoWire5flushEv>:
+
+void TwoWire::flush(void)
+{
+  // XXX: to be implemented.
+}
+ 4c4:	08 95       	ret
+
+000004c6 <_GLOBAL__I__ZN7TwoWire8rxBufferE>:
+    size_t printNumber(unsigned long, uint8_t);
+    size_t printFloat(double, uint8_t);
+  protected:
+    void setWriteError(int err = 1) { write_error = err; }
+  public:
+    Print() : write_error(0) {}
+ 4c6:	10 92 67 01 	sts	0x0167, r1
+ 4ca:	10 92 66 01 	sts	0x0166, r1
+    virtual int available() = 0;
+    virtual int read() = 0;
+    virtual int peek() = 0;
+    virtual void flush() = 0;
+
+    Stream() {_timeout=1000;}
+ 4ce:	88 ee       	ldi	r24, 0xE8	; 232
+ 4d0:	93 e0       	ldi	r25, 0x03	; 3
+ 4d2:	a0 e0       	ldi	r26, 0x00	; 0
+ 4d4:	b0 e0       	ldi	r27, 0x00	; 0
+ 4d6:	80 93 68 01 	sts	0x0168, r24
+ 4da:	90 93 69 01 	sts	0x0169, r25
+ 4de:	a0 93 6a 01 	sts	0x016A, r26
+ 4e2:	b0 93 6b 01 	sts	0x016B, r27
+void (*TwoWire::user_onRequest)(void);
+void (*TwoWire::user_onReceive)(int);
+
+// Constructors ////////////////////////////////////////////////////////////////
+
+TwoWire::TwoWire()
+ 4e6:	8e e0       	ldi	r24, 0x0E	; 14
+ 4e8:	91 e0       	ldi	r25, 0x01	; 1
+ 4ea:	90 93 65 01 	sts	0x0165, r25
+ 4ee:	80 93 64 01 	sts	0x0164, r24
+  user_onRequest = function;
+}
+
+// Preinstantiate Objects //////////////////////////////////////////////////////
+
+TwoWire Wire = TwoWire();
+ 4f2:	08 95       	ret
+
+000004f4 <_ZN7TwoWire5writeEPKhj>:
+}
+
+// must be called in:
+// slave tx event callback
+// or after beginTransmission(address)
+size_t TwoWire::write(const uint8_t *data, size_t quantity)
+ 4f4:	cf 92       	push	r12
+ 4f6:	df 92       	push	r13
+ 4f8:	ef 92       	push	r14
+ 4fa:	ff 92       	push	r15
+ 4fc:	0f 93       	push	r16
+ 4fe:	1f 93       	push	r17
+ 500:	cf 93       	push	r28
+ 502:	df 93       	push	r29
+ 504:	7c 01       	movw	r14, r24
+ 506:	6b 01       	movw	r12, r22
+ 508:	8a 01       	movw	r16, r20
+{
+  if(transmitting){
+ 50a:	80 91 63 01 	lds	r24, 0x0163
+ 50e:	88 23       	and	r24, r24
+ 510:	a1 f0       	breq	.+40     	; 0x53a <_ZN7TwoWire5writeEPKhj+0x46>
+ 512:	c0 e0       	ldi	r28, 0x00	; 0
+ 514:	d0 e0       	ldi	r29, 0x00	; 0
+ 516:	0d c0       	rjmp	.+26     	; 0x532 <_ZN7TwoWire5writeEPKhj+0x3e>
+  // in master transmitter mode
+    for(size_t i = 0; i < quantity; ++i){
+      write(data[i]);
+ 518:	d7 01       	movw	r26, r14
+ 51a:	ed 91       	ld	r30, X+
+ 51c:	fc 91       	ld	r31, X
+ 51e:	d6 01       	movw	r26, r12
+ 520:	ac 0f       	add	r26, r28
+ 522:	bd 1f       	adc	r27, r29
+ 524:	01 90       	ld	r0, Z+
+ 526:	f0 81       	ld	r31, Z
+ 528:	e0 2d       	mov	r30, r0
+ 52a:	c7 01       	movw	r24, r14
+ 52c:	6c 91       	ld	r22, X
+ 52e:	09 95       	icall
+// or after beginTransmission(address)
+size_t TwoWire::write(const uint8_t *data, size_t quantity)
+{
+  if(transmitting){
+  // in master transmitter mode
+    for(size_t i = 0; i < quantity; ++i){
+ 530:	21 96       	adiw	r28, 0x01	; 1
+ 532:	c0 17       	cp	r28, r16
+ 534:	d1 07       	cpc	r29, r17
+ 536:	80 f3       	brcs	.-32     	; 0x518 <_ZN7TwoWire5writeEPKhj+0x24>
+ 538:	04 c0       	rjmp	.+8      	; 0x542 <_ZN7TwoWire5writeEPKhj+0x4e>
+      write(data[i]);
+    }
+  }else{
+  // in slave send mode
+    // reply to master
+    twi_transmit(data, quantity);
+ 53a:	cb 01       	movw	r24, r22
+ 53c:	64 2f       	mov	r22, r20
+ 53e:	0e 94 ac 03 	call	0x758	; 0x758 <twi_transmit>
+  }
+  return quantity;
+}
+ 542:	c8 01       	movw	r24, r16
+ 544:	df 91       	pop	r29
+ 546:	cf 91       	pop	r28
+ 548:	1f 91       	pop	r17
+ 54a:	0f 91       	pop	r16
+ 54c:	ff 90       	pop	r15
+ 54e:	ef 90       	pop	r14
+ 550:	df 90       	pop	r13
+ 552:	cf 90       	pop	r12
+ 554:	08 95       	ret
+
+00000556 <_ZN7TwoWire5writeEh>:
+}
+
+// must be called in:
+// slave tx event callback
+// or after beginTransmission(address)
+size_t TwoWire::write(uint8_t data)
+ 556:	df 93       	push	r29
+ 558:	cf 93       	push	r28
+ 55a:	0f 92       	push	r0
+ 55c:	cd b7       	in	r28, 0x3d	; 61
+ 55e:	de b7       	in	r29, 0x3e	; 62
+ 560:	fc 01       	movw	r30, r24
+ 562:	69 83       	std	Y+1, r22	; 0x01
+{
+  if(transmitting){
+ 564:	80 91 63 01 	lds	r24, 0x0163
+ 568:	88 23       	and	r24, r24
+ 56a:	c9 f0       	breq	.+50     	; 0x59e <_ZN7TwoWire5writeEh+0x48>
+  // in master transmitter mode
+    // don't bother if buffer is full
+    if(txBufferLength >= BUFFER_LENGTH){
+ 56c:	80 91 62 01 	lds	r24, 0x0162
+ 570:	80 32       	cpi	r24, 0x20	; 32
+ 572:	38 f0       	brcs	.+14     	; 0x582 <_ZN7TwoWire5writeEh+0x2c>
+  private:
+    int write_error;
+    size_t printNumber(unsigned long, uint8_t);
+    size_t printFloat(double, uint8_t);
+  protected:
+    void setWriteError(int err = 1) { write_error = err; }
+ 574:	81 e0       	ldi	r24, 0x01	; 1
+ 576:	90 e0       	ldi	r25, 0x00	; 0
+ 578:	93 83       	std	Z+3, r25	; 0x03
+ 57a:	82 83       	std	Z+2, r24	; 0x02
+ 57c:	20 e0       	ldi	r18, 0x00	; 0
+ 57e:	30 e0       	ldi	r19, 0x00	; 0
+ 580:	15 c0       	rjmp	.+42     	; 0x5ac <_ZN7TwoWire5writeEh+0x56>
+      setWriteError();
+      return 0;
+    }
+    // put byte in tx buffer
+    txBuffer[txBufferIndex] = data;
+ 582:	80 91 61 01 	lds	r24, 0x0161
+ 586:	e8 2f       	mov	r30, r24
+ 588:	f0 e0       	ldi	r31, 0x00	; 0
+ 58a:	ef 5b       	subi	r30, 0xBF	; 191
+ 58c:	fe 4f       	sbci	r31, 0xFE	; 254
+ 58e:	99 81       	ldd	r25, Y+1	; 0x01
+ 590:	90 83       	st	Z, r25
+    ++txBufferIndex;
+ 592:	8f 5f       	subi	r24, 0xFF	; 255
+ 594:	80 93 61 01 	sts	0x0161, r24
+    // update amount in buffer   
+    txBufferLength = txBufferIndex;
+ 598:	80 93 62 01 	sts	0x0162, r24
+ 59c:	05 c0       	rjmp	.+10     	; 0x5a8 <_ZN7TwoWire5writeEh+0x52>
+  }else{
+  // in slave send mode
+    // reply to master
+    twi_transmit(&data, 1);
+ 59e:	ce 01       	movw	r24, r28
+ 5a0:	01 96       	adiw	r24, 0x01	; 1
+ 5a2:	61 e0       	ldi	r22, 0x01	; 1
+ 5a4:	0e 94 ac 03 	call	0x758	; 0x758 <twi_transmit>
+ 5a8:	21 e0       	ldi	r18, 0x01	; 1
+ 5aa:	30 e0       	ldi	r19, 0x00	; 0
+  }
+  return 1;
+}
+ 5ac:	c9 01       	movw	r24, r18
+ 5ae:	0f 90       	pop	r0
+ 5b0:	cf 91       	pop	r28
+ 5b2:	df 91       	pop	r29
+ 5b4:	08 95       	ret
+
+000005b6 <_ZN7TwoWire15endTransmissionEh>:
+//	the bus tenure has been properly ended with a STOP. It
+//	is very possible to leave the bus in a hung state if
+//	no call to endTransmission(true) is made. Some I2C
+//	devices will behave oddly if they do not see a STOP.
+//
+uint8_t TwoWire::endTransmission(uint8_t sendStop)
+ 5b6:	0f 93       	push	r16
+ 5b8:	06 2f       	mov	r16, r22
+{
+  // transmit buffer (blocking)
+  int8_t ret = twi_writeTo(txAddress, txBuffer, txBufferLength, 1, sendStop);
+ 5ba:	80 91 40 01 	lds	r24, 0x0140
+ 5be:	61 e4       	ldi	r22, 0x41	; 65
+ 5c0:	71 e0       	ldi	r23, 0x01	; 1
+ 5c2:	40 91 62 01 	lds	r20, 0x0162
+ 5c6:	21 e0       	ldi	r18, 0x01	; 1
+ 5c8:	0e 94 57 03 	call	0x6ae	; 0x6ae <twi_writeTo>
+  // reset tx buffer iterator vars
+  txBufferIndex = 0;
+ 5cc:	10 92 61 01 	sts	0x0161, r1
+  txBufferLength = 0;
+ 5d0:	10 92 62 01 	sts	0x0162, r1
+  // indicate that we are done transmitting
+  transmitting = 0;
+ 5d4:	10 92 63 01 	sts	0x0163, r1
+  return ret;
+}
+ 5d8:	0f 91       	pop	r16
+ 5da:	08 95       	ret
+
+000005dc <_ZN7TwoWire15endTransmissionEv>:
+//	This provides backwards compatibility with the original
+//	definition, and expected behaviour, of endTransmission
+//
+uint8_t TwoWire::endTransmission(void)
+{
+  return endTransmission(true);
+ 5dc:	61 e0       	ldi	r22, 0x01	; 1
+ 5de:	0e 94 db 02 	call	0x5b6	; 0x5b6 <_ZN7TwoWire15endTransmissionEh>
+}
+ 5e2:	08 95       	ret
+
+000005e4 <_ZN7TwoWire11requestFromEhhh>:
+  // clamp to buffer length
+  if(quantity > BUFFER_LENGTH){
+    quantity = BUFFER_LENGTH;
+  }
+  // perform blocking read into buffer
+  uint8_t read = twi_readFrom(address, rxBuffer, quantity, sendStop);
+ 5e4:	41 32       	cpi	r20, 0x21	; 33
+ 5e6:	08 f0       	brcs	.+2      	; 0x5ea <_ZN7TwoWire11requestFromEhhh+0x6>
+ 5e8:	40 e2       	ldi	r20, 0x20	; 32
+ 5ea:	86 2f       	mov	r24, r22
+ 5ec:	6e e1       	ldi	r22, 0x1E	; 30
+ 5ee:	71 e0       	ldi	r23, 0x01	; 1
+ 5f0:	0e 94 0e 03 	call	0x61c	; 0x61c <twi_readFrom>
+  // set rx buffer iterator vars
+  rxBufferIndex = 0;
+ 5f4:	10 92 3e 01 	sts	0x013E, r1
+  rxBufferLength = read;
+ 5f8:	80 93 3f 01 	sts	0x013F, r24
+
+  return read;
+}
+ 5fc:	08 95       	ret
+
+000005fe <_ZN7TwoWire11requestFromEii>:
+  return requestFrom((uint8_t)address, (uint8_t)quantity, (uint8_t)true);
+}
+
+uint8_t TwoWire::requestFrom(int address, int quantity)
+{
+  return requestFrom((uint8_t)address, (uint8_t)quantity, (uint8_t)true);
+ 5fe:	21 e0       	ldi	r18, 0x01	; 1
+ 600:	0e 94 f2 02 	call	0x5e4	; 0x5e4 <_ZN7TwoWire11requestFromEhhh>
+}
+ 604:	08 95       	ret
+
+00000606 <_ZN7TwoWire5beginEv>:
+
+// Public Methods //////////////////////////////////////////////////////////////
+
+void TwoWire::begin(void)
+{
+  rxBufferIndex = 0;
+ 606:	10 92 3e 01 	sts	0x013E, r1
+  rxBufferLength = 0;
+ 60a:	10 92 3f 01 	sts	0x013F, r1
+
+  txBufferIndex = 0;
+ 60e:	10 92 61 01 	sts	0x0161, r1
+  txBufferLength = 0;
+ 612:	10 92 62 01 	sts	0x0162, r1
+
+  twi_init();
+ 616:	0e 94 58 05 	call	0xab0	; 0xab0 <twi_init>
+}
+ 61a:	08 95       	ret
+
+0000061c <twi_readFrom>:
+ *          length: number of bytes to read into array
+ *          sendStop: Boolean indicating whether to send a stop at the end
+ * Output   number of bytes read
+ */
+uint8_t twi_readFrom(uint8_t address, uint8_t* data, uint8_t length, uint8_t sendStop)
+{
+ 61c:	38 2f       	mov	r19, r24
+  uint8_t i;
+
+  // ensure data will fit into buffer
+  if(TWI_BUFFER_LENGTH < length){
+ 61e:	41 32       	cpi	r20, 0x21	; 33
+ 620:	10 f0       	brcs	.+4      	; 0x626 <twi_readFrom+0xa>
+ 622:	40 e0       	ldi	r20, 0x00	; 0
+ 624:	42 c0       	rjmp	.+132    	; 0x6aa <twi_readFrom+0x8e>
+    return 0;
+  }
+
+  // wait until twi is ready, become master receiver
+  while(TWI_READY != twi_state){
+ 626:	80 91 70 01 	lds	r24, 0x0170
+ 62a:	88 23       	and	r24, r24
+ 62c:	e1 f7       	brne	.-8      	; 0x626 <twi_readFrom+0xa>
+    continue;
+  }
+  twi_state = TWI_MRX;
+ 62e:	91 e0       	ldi	r25, 0x01	; 1
+ 630:	90 93 70 01 	sts	0x0170, r25
+  twi_sendStop = sendStop;
+ 634:	20 93 72 01 	sts	0x0172, r18
+  // reset error state (0xFF.. no error occured)
+  twi_error = 0xFF;
+ 638:	8f ef       	ldi	r24, 0xFF	; 255
+ 63a:	80 93 dd 01 	sts	0x01DD, r24
+
+  // initialize buffer iteration vars
+  twi_masterBufferIndex = 0;
+ 63e:	10 92 98 01 	sts	0x0198, r1
+  twi_masterBufferLength = length-1;  // This is not intuitive, read on...
+ 642:	41 50       	subi	r20, 0x01	; 1
+ 644:	40 93 99 01 	sts	0x0199, r20
+ 648:	4f 5f       	subi	r20, 0xFF	; 255
+  // Therefor we must actually set NACK when the _next_ to last byte is
+  // received, causing that NACK to be sent in response to receiving the last
+  // expected byte of data.
+
+  // build sla+w, slave device address + w bit
+  twi_slarw = TW_READ;
+ 64a:	90 93 71 01 	sts	0x0171, r25
+  twi_slarw |= address << 1;
+ 64e:	80 91 71 01 	lds	r24, 0x0171
+ 652:	33 0f       	add	r19, r19
+ 654:	83 2b       	or	r24, r19
+ 656:	80 93 71 01 	sts	0x0171, r24
+
+  if (true == twi_inRepStart) {
+ 65a:	80 91 73 01 	lds	r24, 0x0173
+ 65e:	81 30       	cpi	r24, 0x01	; 1
+ 660:	41 f4       	brne	.+16     	; 0x672 <twi_readFrom+0x56>
+    // (@@@ we hope), and the TWI statemachine is just waiting for the address byte.
+    // We need to remove ourselves from the repeated start state before we enable interrupts,
+    // since the ISR is ASYNC, and we could get confused if we hit the ISR before cleaning
+    // up. Also, don't enable the START interrupt. There may be one pending from the 
+    // repeated start that we sent outselves, and that would really confuse things.
+    twi_inRepStart = false;			// remember, we're dealing with an ASYNC ISR
+ 662:	10 92 73 01 	sts	0x0173, r1
+    TWDR = twi_slarw;
+ 666:	80 91 71 01 	lds	r24, 0x0171
+ 66a:	80 93 bb 00 	sts	0x00BB, r24
+    TWCR = _BV(TWINT) | _BV(TWEA) | _BV(TWEN) | _BV(TWIE);	// enable INTs, but not START
+ 66e:	85 ec       	ldi	r24, 0xC5	; 197
+ 670:	01 c0       	rjmp	.+2      	; 0x674 <twi_readFrom+0x58>
+  }
+  else
+    // send start condition
+    TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWEA) | _BV(TWINT) | _BV(TWSTA);
+ 672:	85 ee       	ldi	r24, 0xE5	; 229
+ 674:	80 93 bc 00 	sts	0x00BC, r24
+
+  // wait for read operation to complete
+  while(TWI_MRX == twi_state){
+ 678:	80 91 70 01 	lds	r24, 0x0170
+ 67c:	81 30       	cpi	r24, 0x01	; 1
+ 67e:	e1 f3       	breq	.-8      	; 0x678 <twi_readFrom+0x5c>
+    continue;
+  }
+
+  if (twi_masterBufferIndex < length)
+ 680:	80 91 98 01 	lds	r24, 0x0198
+ 684:	84 17       	cp	r24, r20
+ 686:	10 f4       	brcc	.+4      	; 0x68c <twi_readFrom+0x70>
+    length = twi_masterBufferIndex;
+ 688:	40 91 98 01 	lds	r20, 0x0198
+ 68c:	20 e0       	ldi	r18, 0x00	; 0
+ 68e:	30 e0       	ldi	r19, 0x00	; 0
+ 690:	0a c0       	rjmp	.+20     	; 0x6a6 <twi_readFrom+0x8a>
+
+  // copy twi buffer to data
+  for(i = 0; i < length; ++i){
+    data[i] = twi_masterBuffer[i];
+ 692:	fb 01       	movw	r30, r22
+ 694:	e2 0f       	add	r30, r18
+ 696:	f3 1f       	adc	r31, r19
+ 698:	d9 01       	movw	r26, r18
+ 69a:	a8 58       	subi	r26, 0x88	; 136
+ 69c:	be 4f       	sbci	r27, 0xFE	; 254
+ 69e:	8c 91       	ld	r24, X
+ 6a0:	80 83       	st	Z, r24
+ 6a2:	2f 5f       	subi	r18, 0xFF	; 255
+ 6a4:	3f 4f       	sbci	r19, 0xFF	; 255
+
+  if (twi_masterBufferIndex < length)
+    length = twi_masterBufferIndex;
+
+  // copy twi buffer to data
+  for(i = 0; i < length; ++i){
+ 6a6:	24 17       	cp	r18, r20
+ 6a8:	a0 f3       	brcs	.-24     	; 0x692 <twi_readFrom+0x76>
+    data[i] = twi_masterBuffer[i];
+  }
+	
+  return length;
+}
+ 6aa:	84 2f       	mov	r24, r20
+ 6ac:	08 95       	ret
+
+000006ae <twi_writeTo>:
+ *          2 .. address send, NACK received
+ *          3 .. data send, NACK received
+ *          4 .. other twi error (lost bus arbitration, bus error, ..)
+ */
+uint8_t twi_writeTo(uint8_t address, uint8_t* data, uint8_t length, uint8_t wait, uint8_t sendStop)
+{
+ 6ae:	0f 93       	push	r16
+ 6b0:	1f 93       	push	r17
+ 6b2:	58 2f       	mov	r21, r24
+ 6b4:	12 2f       	mov	r17, r18
+  uint8_t i;
+
+  // ensure data will fit into buffer
+  if(TWI_BUFFER_LENGTH < length){
+ 6b6:	41 32       	cpi	r20, 0x21	; 33
+ 6b8:	10 f0       	brcs	.+4      	; 0x6be <twi_writeTo+0x10>
+ 6ba:	81 e0       	ldi	r24, 0x01	; 1
+ 6bc:	4a c0       	rjmp	.+148    	; 0x752 <twi_writeTo+0xa4>
+    return 1;
+  }
+
+  // wait until twi is ready, become master transmitter
+  while(TWI_READY != twi_state){
+ 6be:	80 91 70 01 	lds	r24, 0x0170
+ 6c2:	88 23       	and	r24, r24
+ 6c4:	e1 f7       	brne	.-8      	; 0x6be <twi_writeTo+0x10>
+    continue;
+  }
+  twi_state = TWI_MTX;
+ 6c6:	82 e0       	ldi	r24, 0x02	; 2
+ 6c8:	80 93 70 01 	sts	0x0170, r24
+  twi_sendStop = sendStop;
+ 6cc:	00 93 72 01 	sts	0x0172, r16
+  // reset error state (0xFF.. no error occured)
+  twi_error = 0xFF;
+ 6d0:	8f ef       	ldi	r24, 0xFF	; 255
+ 6d2:	80 93 dd 01 	sts	0x01DD, r24
+
+  // initialize buffer iteration vars
+  twi_masterBufferIndex = 0;
+ 6d6:	10 92 98 01 	sts	0x0198, r1
+  twi_masterBufferLength = length;
+ 6da:	40 93 99 01 	sts	0x0199, r20
+ 6de:	a8 e7       	ldi	r26, 0x78	; 120
+ 6e0:	b1 e0       	ldi	r27, 0x01	; 1
+ 6e2:	fb 01       	movw	r30, r22
+ 6e4:	02 c0       	rjmp	.+4      	; 0x6ea <twi_writeTo+0x3c>
+  
+  // copy data to twi buffer
+  for(i = 0; i < length; ++i){
+    twi_masterBuffer[i] = data[i];
+ 6e6:	81 91       	ld	r24, Z+
+ 6e8:	8d 93       	st	X+, r24
+  // initialize buffer iteration vars
+  twi_masterBufferIndex = 0;
+  twi_masterBufferLength = length;
+  
+  // copy data to twi buffer
+  for(i = 0; i < length; ++i){
+ 6ea:	8e 2f       	mov	r24, r30
+ 6ec:	86 1b       	sub	r24, r22
+ 6ee:	84 17       	cp	r24, r20
+ 6f0:	d0 f3       	brcs	.-12     	; 0x6e6 <twi_writeTo+0x38>
+    twi_masterBuffer[i] = data[i];
+  }
+  
+  // build sla+w, slave device address + w bit
+  twi_slarw = TW_WRITE;
+ 6f2:	10 92 71 01 	sts	0x0171, r1
+  twi_slarw |= address << 1;
+ 6f6:	80 91 71 01 	lds	r24, 0x0171
+ 6fa:	55 0f       	add	r21, r21
+ 6fc:	85 2b       	or	r24, r21
+ 6fe:	80 93 71 01 	sts	0x0171, r24
+  
+  // if we're in a repeated start, then we've already sent the START
+  // in the ISR. Don't do it again.
+  //
+  if (true == twi_inRepStart) {
+ 702:	80 91 73 01 	lds	r24, 0x0173
+ 706:	81 30       	cpi	r24, 0x01	; 1
+ 708:	41 f4       	brne	.+16     	; 0x71a <twi_writeTo+0x6c>
+    // (@@@ we hope), and the TWI statemachine is just waiting for the address byte.
+    // We need to remove ourselves from the repeated start state before we enable interrupts,
+    // since the ISR is ASYNC, and we could get confused if we hit the ISR before cleaning
+    // up. Also, don't enable the START interrupt. There may be one pending from the 
+    // repeated start that we sent outselves, and that would really confuse things.
+    twi_inRepStart = false;			// remember, we're dealing with an ASYNC ISR
+ 70a:	10 92 73 01 	sts	0x0173, r1
+    TWDR = twi_slarw;				
+ 70e:	80 91 71 01 	lds	r24, 0x0171
+ 712:	80 93 bb 00 	sts	0x00BB, r24
+    TWCR = _BV(TWINT) | _BV(TWEA) | _BV(TWEN) | _BV(TWIE);	// enable INTs, but not START
+ 716:	85 ec       	ldi	r24, 0xC5	; 197
+ 718:	01 c0       	rjmp	.+2      	; 0x71c <twi_writeTo+0x6e>
+  }
+  else
+    // send start condition
+    TWCR = _BV(TWINT) | _BV(TWEA) | _BV(TWEN) | _BV(TWIE) | _BV(TWSTA);	// enable INTs
+ 71a:	85 ee       	ldi	r24, 0xE5	; 229
+ 71c:	80 93 bc 00 	sts	0x00BC, r24
+
+  // wait for write operation to complete
+  while(wait && (TWI_MTX == twi_state)){
+ 720:	11 23       	and	r17, r17
+ 722:	21 f0       	breq	.+8      	; 0x72c <twi_writeTo+0x7e>
+ 724:	80 91 70 01 	lds	r24, 0x0170
+ 728:	82 30       	cpi	r24, 0x02	; 2
+ 72a:	e1 f3       	breq	.-8      	; 0x724 <twi_writeTo+0x76>
+    continue;
+  }
+  
+  if (twi_error == 0xFF)
+ 72c:	80 91 dd 01 	lds	r24, 0x01DD
+ 730:	8f 3f       	cpi	r24, 0xFF	; 255
+ 732:	11 f4       	brne	.+4      	; 0x738 <twi_writeTo+0x8a>
+ 734:	80 e0       	ldi	r24, 0x00	; 0
+ 736:	0d c0       	rjmp	.+26     	; 0x752 <twi_writeTo+0xa4>
+    return 0;	// success
+  else if (twi_error == TW_MT_SLA_NACK)
+ 738:	80 91 dd 01 	lds	r24, 0x01DD
+ 73c:	80 32       	cpi	r24, 0x20	; 32
+ 73e:	11 f4       	brne	.+4      	; 0x744 <twi_writeTo+0x96>
+ 740:	82 e0       	ldi	r24, 0x02	; 2
+ 742:	07 c0       	rjmp	.+14     	; 0x752 <twi_writeTo+0xa4>
+    return 2;	// error: address send, nack received
+  else if (twi_error == TW_MT_DATA_NACK)
+ 744:	80 91 dd 01 	lds	r24, 0x01DD
+ 748:	80 33       	cpi	r24, 0x30	; 48
+ 74a:	11 f0       	breq	.+4      	; 0x750 <twi_writeTo+0xa2>
+ 74c:	84 e0       	ldi	r24, 0x04	; 4
+ 74e:	01 c0       	rjmp	.+2      	; 0x752 <twi_writeTo+0xa4>
+ 750:	83 e0       	ldi	r24, 0x03	; 3
+    return 3;	// error: data send, nack received
+  else
+    return 4;	// other twi error
+}
+ 752:	1f 91       	pop	r17
+ 754:	0f 91       	pop	r16
+ 756:	08 95       	ret
+
+00000758 <twi_transmit>:
+ * Output   1 length too long for buffer
+ *          2 not slave transmitter
+ *          0 ok
+ */
+uint8_t twi_transmit(const uint8_t* data, uint8_t length)
+{
+ 758:	48 2f       	mov	r20, r24
+  uint8_t i;
+
+  // ensure data will fit into buffer
+  if(TWI_BUFFER_LENGTH < length){
+ 75a:	61 32       	cpi	r22, 0x21	; 33
+ 75c:	10 f0       	brcs	.+4      	; 0x762 <twi_transmit+0xa>
+ 75e:	81 e0       	ldi	r24, 0x01	; 1
+ 760:	08 95       	ret
+    return 1;
+  }
+  
+  // ensure we are currently a slave transmitter
+  if(TWI_STX != twi_state){
+ 762:	80 91 70 01 	lds	r24, 0x0170
+ 766:	84 30       	cpi	r24, 0x04	; 4
+ 768:	11 f0       	breq	.+4      	; 0x76e <twi_transmit+0x16>
+ 76a:	82 e0       	ldi	r24, 0x02	; 2
+ 76c:	08 95       	ret
+    return 2;
+  }
+  
+  // set length and copy data into tx buffer
+  twi_txBufferLength = length;
+ 76e:	60 93 bb 01 	sts	0x01BB, r22
+ 772:	aa e9       	ldi	r26, 0x9A	; 154
+ 774:	b1 e0       	ldi	r27, 0x01	; 1
+ 776:	84 2f       	mov	r24, r20
+ 778:	9c 01       	movw	r18, r24
+ 77a:	f9 01       	movw	r30, r18
+ 77c:	02 c0       	rjmp	.+4      	; 0x782 <twi_transmit+0x2a>
+  for(i = 0; i < length; ++i){
+    twi_txBuffer[i] = data[i];
+ 77e:	81 91       	ld	r24, Z+
+ 780:	8d 93       	st	X+, r24
+    return 2;
+  }
+  
+  // set length and copy data into tx buffer
+  twi_txBufferLength = length;
+  for(i = 0; i < length; ++i){
+ 782:	8e 2f       	mov	r24, r30
+ 784:	84 1b       	sub	r24, r20
+ 786:	86 17       	cp	r24, r22
+ 788:	d0 f3       	brcs	.-12     	; 0x77e <twi_transmit+0x26>
+ 78a:	80 e0       	ldi	r24, 0x00	; 0
+    twi_txBuffer[i] = data[i];
+  }
+  
+  return 0;
+}
+ 78c:	08 95       	ret
+
+0000078e <__vector_24>:
+  // update twi state
+  twi_state = TWI_READY;
+}
+
+ISR(TWI_vect)
+{
+ 78e:	1f 92       	push	r1
+ 790:	0f 92       	push	r0
+ 792:	0f b6       	in	r0, 0x3f	; 63
+ 794:	0f 92       	push	r0
+ 796:	11 24       	eor	r1, r1
+ 798:	2f 93       	push	r18
+ 79a:	3f 93       	push	r19
+ 79c:	4f 93       	push	r20
+ 79e:	5f 93       	push	r21
+ 7a0:	6f 93       	push	r22
+ 7a2:	7f 93       	push	r23
+ 7a4:	8f 93       	push	r24
+ 7a6:	9f 93       	push	r25
+ 7a8:	af 93       	push	r26
+ 7aa:	bf 93       	push	r27
+ 7ac:	ef 93       	push	r30
+ 7ae:	ff 93       	push	r31
+  switch(TW_STATUS){
+ 7b0:	80 91 b9 00 	lds	r24, 0x00B9
+ 7b4:	90 e0       	ldi	r25, 0x00	; 0
+ 7b6:	88 7f       	andi	r24, 0xF8	; 248
+ 7b8:	90 70       	andi	r25, 0x00	; 0
+ 7ba:	80 36       	cpi	r24, 0x60	; 96
+ 7bc:	91 05       	cpc	r25, r1
+ 7be:	09 f4       	brne	.+2      	; 0x7c2 <__vector_24+0x34>
+ 7c0:	f2 c0       	rjmp	.+484    	; 0x9a6 <__stack+0xa7>
+ 7c2:	81 36       	cpi	r24, 0x61	; 97
+ 7c4:	91 05       	cpc	r25, r1
+ 7c6:	cc f5       	brge	.+114    	; 0x83a <__vector_24+0xac>
+ 7c8:	88 32       	cpi	r24, 0x28	; 40
+ 7ca:	91 05       	cpc	r25, r1
+ 7cc:	09 f4       	brne	.+2      	; 0x7d0 <__vector_24+0x42>
+ 7ce:	7b c0       	rjmp	.+246    	; 0x8c6 <__vector_24+0x138>
+ 7d0:	89 32       	cpi	r24, 0x29	; 41
+ 7d2:	91 05       	cpc	r25, r1
+ 7d4:	b4 f4       	brge	.+44     	; 0x802 <__vector_24+0x74>
+ 7d6:	80 31       	cpi	r24, 0x10	; 16
+ 7d8:	91 05       	cpc	r25, r1
+ 7da:	09 f4       	brne	.+2      	; 0x7de <__vector_24+0x50>
+ 7dc:	6f c0       	rjmp	.+222    	; 0x8bc <__vector_24+0x12e>
+ 7de:	81 31       	cpi	r24, 0x11	; 17
+ 7e0:	91 05       	cpc	r25, r1
+ 7e2:	3c f4       	brge	.+14     	; 0x7f2 <__vector_24+0x64>
+ 7e4:	00 97       	sbiw	r24, 0x00	; 0
+ 7e6:	09 f4       	brne	.+2      	; 0x7ea <__vector_24+0x5c>
+ 7e8:	47 c1       	rjmp	.+654    	; 0xa78 <__stack+0x179>
+ 7ea:	08 97       	sbiw	r24, 0x08	; 8
+ 7ec:	09 f0       	breq	.+2      	; 0x7f0 <__vector_24+0x62>
+ 7ee:	4f c1       	rjmp	.+670    	; 0xa8e <__stack+0x18f>
+ 7f0:	65 c0       	rjmp	.+202    	; 0x8bc <__vector_24+0x12e>
+ 7f2:	88 31       	cpi	r24, 0x18	; 24
+ 7f4:	91 05       	cpc	r25, r1
+ 7f6:	09 f4       	brne	.+2      	; 0x7fa <__vector_24+0x6c>
+ 7f8:	66 c0       	rjmp	.+204    	; 0x8c6 <__vector_24+0x138>
+ 7fa:	80 97       	sbiw	r24, 0x20	; 32
+ 7fc:	09 f0       	breq	.+2      	; 0x800 <__vector_24+0x72>
+ 7fe:	47 c1       	rjmp	.+654    	; 0xa8e <__stack+0x18f>
+ 800:	82 c0       	rjmp	.+260    	; 0x906 <__stack+0x7>
+ 802:	80 34       	cpi	r24, 0x40	; 64
+ 804:	91 05       	cpc	r25, r1
+ 806:	09 f4       	brne	.+2      	; 0x80a <__vector_24+0x7c>
+ 808:	a4 c0       	rjmp	.+328    	; 0x952 <__stack+0x53>
+ 80a:	81 34       	cpi	r24, 0x41	; 65
+ 80c:	91 05       	cpc	r25, r1
+ 80e:	44 f4       	brge	.+16     	; 0x820 <__vector_24+0x92>
+ 810:	80 33       	cpi	r24, 0x30	; 48
+ 812:	91 05       	cpc	r25, r1
+ 814:	09 f4       	brne	.+2      	; 0x818 <__vector_24+0x8a>
+ 816:	82 c0       	rjmp	.+260    	; 0x91c <__stack+0x1d>
+ 818:	c8 97       	sbiw	r24, 0x38	; 56
+ 81a:	09 f0       	breq	.+2      	; 0x81e <__vector_24+0x90>
+ 81c:	38 c1       	rjmp	.+624    	; 0xa8e <__stack+0x18f>
+ 81e:	89 c0       	rjmp	.+274    	; 0x932 <__stack+0x33>
+ 820:	80 35       	cpi	r24, 0x50	; 80
+ 822:	91 05       	cpc	r25, r1
+ 824:	09 f4       	brne	.+2      	; 0x828 <__vector_24+0x9a>
+ 826:	89 c0       	rjmp	.+274    	; 0x93a <__stack+0x3b>
+ 828:	88 35       	cpi	r24, 0x58	; 88
+ 82a:	91 05       	cpc	r25, r1
+ 82c:	09 f4       	brne	.+2      	; 0x830 <__vector_24+0xa2>
+ 82e:	96 c0       	rjmp	.+300    	; 0x95c <__stack+0x5d>
+ 830:	88 34       	cpi	r24, 0x48	; 72
+ 832:	91 05       	cpc	r25, r1
+ 834:	09 f0       	breq	.+2      	; 0x838 <__vector_24+0xaa>
+ 836:	2b c1       	rjmp	.+598    	; 0xa8e <__stack+0x18f>
+ 838:	ae c0       	rjmp	.+348    	; 0x996 <__stack+0x97>
+ 83a:	88 39       	cpi	r24, 0x98	; 152
+ 83c:	91 05       	cpc	r25, r1
+ 83e:	09 f4       	brne	.+2      	; 0x842 <__vector_24+0xb4>
+ 840:	13 c1       	rjmp	.+550    	; 0xa68 <__stack+0x169>
+ 842:	89 39       	cpi	r24, 0x99	; 153
+ 844:	91 05       	cpc	r25, r1
+ 846:	ec f4       	brge	.+58     	; 0x882 <__vector_24+0xf4>
+ 848:	88 37       	cpi	r24, 0x78	; 120
+ 84a:	91 05       	cpc	r25, r1
+ 84c:	09 f4       	brne	.+2      	; 0x850 <__vector_24+0xc2>
+ 84e:	ab c0       	rjmp	.+342    	; 0x9a6 <__stack+0xa7>
+ 850:	89 37       	cpi	r24, 0x79	; 121
+ 852:	91 05       	cpc	r25, r1
+ 854:	4c f4       	brge	.+18     	; 0x868 <__vector_24+0xda>
+ 856:	88 36       	cpi	r24, 0x68	; 104
+ 858:	91 05       	cpc	r25, r1
+ 85a:	09 f4       	brne	.+2      	; 0x85e <__vector_24+0xd0>
+ 85c:	a4 c0       	rjmp	.+328    	; 0x9a6 <__stack+0xa7>
+ 85e:	80 37       	cpi	r24, 0x70	; 112
+ 860:	91 05       	cpc	r25, r1
+ 862:	09 f0       	breq	.+2      	; 0x866 <__vector_24+0xd8>
+ 864:	14 c1       	rjmp	.+552    	; 0xa8e <__stack+0x18f>
+ 866:	9f c0       	rjmp	.+318    	; 0x9a6 <__stack+0xa7>
+ 868:	88 38       	cpi	r24, 0x88	; 136
+ 86a:	91 05       	cpc	r25, r1
+ 86c:	09 f4       	brne	.+2      	; 0x870 <__vector_24+0xe2>
+ 86e:	fc c0       	rjmp	.+504    	; 0xa68 <__stack+0x169>
+ 870:	80 39       	cpi	r24, 0x90	; 144
+ 872:	91 05       	cpc	r25, r1
+ 874:	09 f4       	brne	.+2      	; 0x878 <__vector_24+0xea>
+ 876:	9d c0       	rjmp	.+314    	; 0x9b2 <__stack+0xb3>
+ 878:	80 38       	cpi	r24, 0x80	; 128
+ 87a:	91 05       	cpc	r25, r1
+ 87c:	09 f0       	breq	.+2      	; 0x880 <__vector_24+0xf2>
+ 87e:	07 c1       	rjmp	.+526    	; 0xa8e <__stack+0x18f>
+ 880:	98 c0       	rjmp	.+304    	; 0x9b2 <__stack+0xb3>
+ 882:	80 3b       	cpi	r24, 0xB0	; 176
+ 884:	91 05       	cpc	r25, r1
+ 886:	09 f4       	brne	.+2      	; 0x88a <__vector_24+0xfc>
+ 888:	c6 c0       	rjmp	.+396    	; 0xa16 <__stack+0x117>
+ 88a:	81 3b       	cpi	r24, 0xB1	; 177
+ 88c:	91 05       	cpc	r25, r1
+ 88e:	4c f4       	brge	.+18     	; 0x8a2 <__vector_24+0x114>
+ 890:	80 3a       	cpi	r24, 0xA0	; 160
+ 892:	91 05       	cpc	r25, r1
+ 894:	09 f4       	brne	.+2      	; 0x898 <__vector_24+0x10a>
+ 896:	9f c0       	rjmp	.+318    	; 0x9d6 <__stack+0xd7>
+ 898:	88 3a       	cpi	r24, 0xA8	; 168
+ 89a:	91 05       	cpc	r25, r1
+ 89c:	09 f0       	breq	.+2      	; 0x8a0 <__vector_24+0x112>
+ 89e:	f7 c0       	rjmp	.+494    	; 0xa8e <__stack+0x18f>
+ 8a0:	ba c0       	rjmp	.+372    	; 0xa16 <__stack+0x117>
+ 8a2:	80 3c       	cpi	r24, 0xC0	; 192
+ 8a4:	91 05       	cpc	r25, r1
+ 8a6:	09 f4       	brne	.+2      	; 0x8aa <__vector_24+0x11c>
+ 8a8:	e3 c0       	rjmp	.+454    	; 0xa70 <__stack+0x171>
+ 8aa:	88 3c       	cpi	r24, 0xC8	; 200
+ 8ac:	91 05       	cpc	r25, r1
+ 8ae:	09 f4       	brne	.+2      	; 0x8b2 <__vector_24+0x124>
+ 8b0:	df c0       	rjmp	.+446    	; 0xa70 <__stack+0x171>
+ 8b2:	88 3b       	cpi	r24, 0xB8	; 184
+ 8b4:	91 05       	cpc	r25, r1
+ 8b6:	09 f0       	breq	.+2      	; 0x8ba <__vector_24+0x12c>
+ 8b8:	ea c0       	rjmp	.+468    	; 0xa8e <__stack+0x18f>
+ 8ba:	c2 c0       	rjmp	.+388    	; 0xa40 <__stack+0x141>
+    // All Master
+    case TW_START:     // sent start condition
+    case TW_REP_START: // sent repeated start condition
+      // copy device address and r/w bit to output register and ack
+      TWDR = twi_slarw;
+ 8bc:	80 91 71 01 	lds	r24, 0x0171
+ 8c0:	80 93 bb 00 	sts	0x00BB, r24
+ 8c4:	cf c0       	rjmp	.+414    	; 0xa64 <__stack+0x165>
+
+    // Master Transmitter
+    case TW_MT_SLA_ACK:  // slave receiver acked address
+    case TW_MT_DATA_ACK: // slave receiver acked data
+      // if there is data to send, send it, otherwise stop 
+      if(twi_masterBufferIndex < twi_masterBufferLength){
+ 8c6:	90 91 98 01 	lds	r25, 0x0198
+ 8ca:	80 91 99 01 	lds	r24, 0x0199
+ 8ce:	98 17       	cp	r25, r24
+ 8d0:	68 f4       	brcc	.+26     	; 0x8ec <__vector_24+0x15e>
+        // copy data to output register and ack
+        TWDR = twi_masterBuffer[twi_masterBufferIndex++];
+ 8d2:	90 91 98 01 	lds	r25, 0x0198
+ 8d6:	e9 2f       	mov	r30, r25
+ 8d8:	f0 e0       	ldi	r31, 0x00	; 0
+ 8da:	e8 58       	subi	r30, 0x88	; 136
+ 8dc:	fe 4f       	sbci	r31, 0xFE	; 254
+ 8de:	80 81       	ld	r24, Z
+ 8e0:	80 93 bb 00 	sts	0x00BB, r24
+ 8e4:	9f 5f       	subi	r25, 0xFF	; 255
+ 8e6:	90 93 98 01 	sts	0x0198, r25
+ 8ea:	bc c0       	rjmp	.+376    	; 0xa64 <__stack+0x165>
+        twi_reply(1);
+      }else{
+	if (twi_sendStop)
+ 8ec:	80 91 72 01 	lds	r24, 0x0172
+ 8f0:	88 23       	and	r24, r24
+ 8f2:	09 f4       	brne	.+2      	; 0x8f6 <__vector_24+0x168>
+ 8f4:	4b c0       	rjmp	.+150    	; 0x98c <__stack+0x8d>
+ * Output   none
+ */
+void twi_stop(void)
+{
+  // send stop condition
+  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWEA) | _BV(TWINT) | _BV(TWSTO);
+ 8f6:	85 ed       	ldi	r24, 0xD5	; 213
+ 8f8:	80 93 bc 00 	sts	0x00BC, r24
+
+  // wait for stop condition to be exectued on bus
+  // TWINT is not set after a stop condition!
+  while(TWCR & _BV(TWSTO)){
+ 8fc:	80 91 bc 00 	lds	r24, 0x00BC
+ 900:	84 fd       	sbrc	r24, 4
+ 902:	fc cf       	rjmp	.-8      	; 0x8fc <__vector_24+0x16e>
+ 904:	c2 c0       	rjmp	.+388    	; 0xa8a <__stack+0x18b>
+	  twi_state = TWI_READY;
+	}
+      }
+      break;
+    case TW_MT_SLA_NACK:  // address sent, nack received
+      twi_error = TW_MT_SLA_NACK;
+ 906:	80 e2       	ldi	r24, 0x20	; 32
+ 908:	80 93 dd 01 	sts	0x01DD, r24
+ * Output   none
+ */
+void twi_stop(void)
+{
+  // send stop condition
+  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWEA) | _BV(TWINT) | _BV(TWSTO);
+ 90c:	85 ed       	ldi	r24, 0xD5	; 213
+ 90e:	80 93 bc 00 	sts	0x00BC, r24
+
+  // wait for stop condition to be exectued on bus
+  // TWINT is not set after a stop condition!
+  while(TWCR & _BV(TWSTO)){
+ 912:	80 91 bc 00 	lds	r24, 0x00BC
+ 916:	84 fd       	sbrc	r24, 4
+ 918:	fc cf       	rjmp	.-8      	; 0x912 <__stack+0x13>
+ 91a:	b7 c0       	rjmp	.+366    	; 0xa8a <__stack+0x18b>
+    case TW_MT_SLA_NACK:  // address sent, nack received
+      twi_error = TW_MT_SLA_NACK;
+      twi_stop();
+      break;
+    case TW_MT_DATA_NACK: // data sent, nack received
+      twi_error = TW_MT_DATA_NACK;
+ 91c:	80 e3       	ldi	r24, 0x30	; 48
+ 91e:	80 93 dd 01 	sts	0x01DD, r24
+ * Output   none
+ */
+void twi_stop(void)
+{
+  // send stop condition
+  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWEA) | _BV(TWINT) | _BV(TWSTO);
+ 922:	85 ed       	ldi	r24, 0xD5	; 213
+ 924:	80 93 bc 00 	sts	0x00BC, r24
+
+  // wait for stop condition to be exectued on bus
+  // TWINT is not set after a stop condition!
+  while(TWCR & _BV(TWSTO)){
+ 928:	80 91 bc 00 	lds	r24, 0x00BC
+ 92c:	84 fd       	sbrc	r24, 4
+ 92e:	fc cf       	rjmp	.-8      	; 0x928 <__stack+0x29>
+ 930:	ac c0       	rjmp	.+344    	; 0xa8a <__stack+0x18b>
+    case TW_MT_DATA_NACK: // data sent, nack received
+      twi_error = TW_MT_DATA_NACK;
+      twi_stop();
+      break;
+    case TW_MT_ARB_LOST: // lost bus arbitration
+      twi_error = TW_MT_ARB_LOST;
+ 932:	88 e3       	ldi	r24, 0x38	; 56
+ 934:	80 93 dd 01 	sts	0x01DD, r24
+ 938:	9b c0       	rjmp	.+310    	; 0xa70 <__stack+0x171>
+      break;
+
+    // Master Receiver
+    case TW_MR_DATA_ACK: // data received, ack sent
+      // put byte into buffer
+      twi_masterBuffer[twi_masterBufferIndex++] = TWDR;
+ 93a:	80 91 98 01 	lds	r24, 0x0198
+ 93e:	90 91 bb 00 	lds	r25, 0x00BB
+ 942:	e8 2f       	mov	r30, r24
+ 944:	f0 e0       	ldi	r31, 0x00	; 0
+ 946:	e8 58       	subi	r30, 0x88	; 136
+ 948:	fe 4f       	sbci	r31, 0xFE	; 254
+ 94a:	90 83       	st	Z, r25
+ 94c:	8f 5f       	subi	r24, 0xFF	; 255
+ 94e:	80 93 98 01 	sts	0x0198, r24
+    case TW_MR_SLA_ACK:  // address sent, ack received
+      // ack if more bytes are expected, otherwise nack
+      if(twi_masterBufferIndex < twi_masterBufferLength){
+ 952:	90 91 98 01 	lds	r25, 0x0198
+ 956:	80 91 99 01 	lds	r24, 0x0199
+ 95a:	82 c0       	rjmp	.+260    	; 0xa60 <__stack+0x161>
+        twi_reply(0);
+      }
+      break;
+    case TW_MR_DATA_NACK: // data received, nack sent
+      // put final byte into buffer
+      twi_masterBuffer[twi_masterBufferIndex++] = TWDR;
+ 95c:	80 91 98 01 	lds	r24, 0x0198
+ 960:	90 91 bb 00 	lds	r25, 0x00BB
+ 964:	e8 2f       	mov	r30, r24
+ 966:	f0 e0       	ldi	r31, 0x00	; 0
+ 968:	e8 58       	subi	r30, 0x88	; 136
+ 96a:	fe 4f       	sbci	r31, 0xFE	; 254
+ 96c:	90 83       	st	Z, r25
+ 96e:	8f 5f       	subi	r24, 0xFF	; 255
+ 970:	80 93 98 01 	sts	0x0198, r24
+	if (twi_sendStop)
+ 974:	80 91 72 01 	lds	r24, 0x0172
+ 978:	88 23       	and	r24, r24
+ 97a:	41 f0       	breq	.+16     	; 0x98c <__stack+0x8d>
+ * Output   none
+ */
+void twi_stop(void)
+{
+  // send stop condition
+  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWEA) | _BV(TWINT) | _BV(TWSTO);
+ 97c:	85 ed       	ldi	r24, 0xD5	; 213
+ 97e:	80 93 bc 00 	sts	0x00BC, r24
+
+  // wait for stop condition to be exectued on bus
+  // TWINT is not set after a stop condition!
+  while(TWCR & _BV(TWSTO)){
+ 982:	80 91 bc 00 	lds	r24, 0x00BC
+ 986:	84 fd       	sbrc	r24, 4
+ 988:	fc cf       	rjmp	.-8      	; 0x982 <__stack+0x83>
+ 98a:	7f c0       	rjmp	.+254    	; 0xa8a <__stack+0x18b>
+      // put final byte into buffer
+      twi_masterBuffer[twi_masterBufferIndex++] = TWDR;
+	if (twi_sendStop)
+          twi_stop();
+	else {
+	  twi_inRepStart = true;	// we're gonna send the START
+ 98c:	81 e0       	ldi	r24, 0x01	; 1
+ 98e:	80 93 73 01 	sts	0x0173, r24
+	  // don't enable the interrupt. We'll generate the start, but we 
+	  // avoid handling the interrupt until we're in the next transaction,
+	  // at the point where we would normally issue the start.
+	  TWCR = _BV(TWINT) | _BV(TWSTA)| _BV(TWEN) ;
+ 992:	84 ea       	ldi	r24, 0xA4	; 164
+ 994:	6e c0       	rjmp	.+220    	; 0xa72 <__stack+0x173>
+ * Output   none
+ */
+void twi_stop(void)
+{
+  // send stop condition
+  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWEA) | _BV(TWINT) | _BV(TWSTO);
+ 996:	85 ed       	ldi	r24, 0xD5	; 213
+ 998:	80 93 bc 00 	sts	0x00BC, r24
+
+  // wait for stop condition to be exectued on bus
+  // TWINT is not set after a stop condition!
+  while(TWCR & _BV(TWSTO)){
+ 99c:	80 91 bc 00 	lds	r24, 0x00BC
+ 9a0:	84 fd       	sbrc	r24, 4
+ 9a2:	fc cf       	rjmp	.-8      	; 0x99c <__stack+0x9d>
+ 9a4:	72 c0       	rjmp	.+228    	; 0xa8a <__stack+0x18b>
+    case TW_SR_SLA_ACK:   // addressed, returned ack
+    case TW_SR_GCALL_ACK: // addressed generally, returned ack
+    case TW_SR_ARB_LOST_SLA_ACK:   // lost arbitration, returned ack
+    case TW_SR_ARB_LOST_GCALL_ACK: // lost arbitration, returned ack
+      // enter slave receiver mode
+      twi_state = TWI_SRX;
+ 9a6:	83 e0       	ldi	r24, 0x03	; 3
+ 9a8:	80 93 70 01 	sts	0x0170, r24
+      // indicate that rx buffer can be overwritten and ack
+      twi_rxBufferIndex = 0;
+ 9ac:	10 92 dc 01 	sts	0x01DC, r1
+ 9b0:	59 c0       	rjmp	.+178    	; 0xa64 <__stack+0x165>
+      twi_reply(1);
+      break;
+    case TW_SR_DATA_ACK:       // data received, returned ack
+    case TW_SR_GCALL_DATA_ACK: // data received generally, returned ack
+      // if there is still room in the rx buffer
+      if(twi_rxBufferIndex < TWI_BUFFER_LENGTH){
+ 9b2:	80 91 dc 01 	lds	r24, 0x01DC
+ 9b6:	80 32       	cpi	r24, 0x20	; 32
+ 9b8:	08 f0       	brcs	.+2      	; 0x9bc <__stack+0xbd>
+ 9ba:	56 c0       	rjmp	.+172    	; 0xa68 <__stack+0x169>
+        // put byte in buffer and ack
+        twi_rxBuffer[twi_rxBufferIndex++] = TWDR;
+ 9bc:	80 91 dc 01 	lds	r24, 0x01DC
+ 9c0:	90 91 bb 00 	lds	r25, 0x00BB
+ 9c4:	e8 2f       	mov	r30, r24
+ 9c6:	f0 e0       	ldi	r31, 0x00	; 0
+ 9c8:	e4 54       	subi	r30, 0x44	; 68
+ 9ca:	fe 4f       	sbci	r31, 0xFE	; 254
+ 9cc:	90 83       	st	Z, r25
+ 9ce:	8f 5f       	subi	r24, 0xFF	; 255
+ 9d0:	80 93 dc 01 	sts	0x01DC, r24
+ 9d4:	47 c0       	rjmp	.+142    	; 0xa64 <__stack+0x165>
+        twi_reply(0);
+      }
+      break;
+    case TW_SR_STOP: // stop or repeated start condition received
+      // put a null char after data if there's room
+      if(twi_rxBufferIndex < TWI_BUFFER_LENGTH){
+ 9d6:	80 91 dc 01 	lds	r24, 0x01DC
+ 9da:	80 32       	cpi	r24, 0x20	; 32
+ 9dc:	30 f4       	brcc	.+12     	; 0x9ea <__stack+0xeb>
+        twi_rxBuffer[twi_rxBufferIndex] = '\0';
+ 9de:	e0 91 dc 01 	lds	r30, 0x01DC
+ 9e2:	f0 e0       	ldi	r31, 0x00	; 0
+ 9e4:	e4 54       	subi	r30, 0x44	; 68
+ 9e6:	fe 4f       	sbci	r31, 0xFE	; 254
+ 9e8:	10 82       	st	Z, r1
+ * Output   none
+ */
+void twi_stop(void)
+{
+  // send stop condition
+  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWEA) | _BV(TWINT) | _BV(TWSTO);
+ 9ea:	85 ed       	ldi	r24, 0xD5	; 213
+ 9ec:	80 93 bc 00 	sts	0x00BC, r24
+
+  // wait for stop condition to be exectued on bus
+  // TWINT is not set after a stop condition!
+  while(TWCR & _BV(TWSTO)){
+ 9f0:	80 91 bc 00 	lds	r24, 0x00BC
+ 9f4:	84 fd       	sbrc	r24, 4
+ 9f6:	fc cf       	rjmp	.-8      	; 0x9f0 <__stack+0xf1>
+    continue;
+  }
+
+  // update twi state
+  twi_state = TWI_READY;
+ 9f8:	10 92 70 01 	sts	0x0170, r1
+        twi_rxBuffer[twi_rxBufferIndex] = '\0';
+      }
+      // sends ack and stops interface for clock stretching
+      twi_stop();
+      // callback to user defined callback
+      twi_onSlaveReceive(twi_rxBuffer, twi_rxBufferIndex);
+ 9fc:	60 91 dc 01 	lds	r22, 0x01DC
+ a00:	e0 91 76 01 	lds	r30, 0x0176
+ a04:	f0 91 77 01 	lds	r31, 0x0177
+ a08:	8c eb       	ldi	r24, 0xBC	; 188
+ a0a:	91 e0       	ldi	r25, 0x01	; 1
+ a0c:	70 e0       	ldi	r23, 0x00	; 0
+ a0e:	09 95       	icall
+      // since we submit rx buffer to "wire" library, we can reset it
+      twi_rxBufferIndex = 0;
+ a10:	10 92 dc 01 	sts	0x01DC, r1
+ a14:	2d c0       	rjmp	.+90     	; 0xa70 <__stack+0x171>
+    
+    // Slave Transmitter
+    case TW_ST_SLA_ACK:          // addressed, returned ack
+    case TW_ST_ARB_LOST_SLA_ACK: // arbitration lost, returned ack
+      // enter slave transmitter mode
+      twi_state = TWI_STX;
+ a16:	84 e0       	ldi	r24, 0x04	; 4
+ a18:	80 93 70 01 	sts	0x0170, r24
+      // ready the tx buffer index for iteration
+      twi_txBufferIndex = 0;
+ a1c:	10 92 ba 01 	sts	0x01BA, r1
+      // set tx buffer length to be zero, to verify if user changes it
+      twi_txBufferLength = 0;
+ a20:	10 92 bb 01 	sts	0x01BB, r1
+      // request for txBuffer to be filled and length to be set
+      // note: user must call twi_transmit(bytes, length) to do this
+      twi_onSlaveTransmit();
+ a24:	e0 91 74 01 	lds	r30, 0x0174
+ a28:	f0 91 75 01 	lds	r31, 0x0175
+ a2c:	09 95       	icall
+      // if they didn't change buffer & length, initialize it
+      if(0 == twi_txBufferLength){
+ a2e:	80 91 bb 01 	lds	r24, 0x01BB
+ a32:	88 23       	and	r24, r24
+ a34:	29 f4       	brne	.+10     	; 0xa40 <__stack+0x141>
+        twi_txBufferLength = 1;
+ a36:	81 e0       	ldi	r24, 0x01	; 1
+ a38:	80 93 bb 01 	sts	0x01BB, r24
+        twi_txBuffer[0] = 0x00;
+ a3c:	10 92 9a 01 	sts	0x019A, r1
+      }
+      // transmit first byte from buffer, fall
+    case TW_ST_DATA_ACK: // byte sent, ack returned
+      // copy data to output register
+      TWDR = twi_txBuffer[twi_txBufferIndex++];
+ a40:	90 91 ba 01 	lds	r25, 0x01BA
+ a44:	e9 2f       	mov	r30, r25
+ a46:	f0 e0       	ldi	r31, 0x00	; 0
+ a48:	e6 56       	subi	r30, 0x66	; 102
+ a4a:	fe 4f       	sbci	r31, 0xFE	; 254
+ a4c:	80 81       	ld	r24, Z
+ a4e:	80 93 bb 00 	sts	0x00BB, r24
+ a52:	9f 5f       	subi	r25, 0xFF	; 255
+ a54:	90 93 ba 01 	sts	0x01BA, r25
+      // if there is more to send, ack, otherwise nack
+      if(twi_txBufferIndex < twi_txBufferLength){
+ a58:	90 91 ba 01 	lds	r25, 0x01BA
+ a5c:	80 91 bb 01 	lds	r24, 0x01BB
+ a60:	98 17       	cp	r25, r24
+ a62:	10 f4       	brcc	.+4      	; 0xa68 <__stack+0x169>
+ */
+void twi_reply(uint8_t ack)
+{
+  // transmit master read ready signal, with or without ack
+  if(ack){
+    TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT) | _BV(TWEA);
+ a64:	85 ec       	ldi	r24, 0xC5	; 197
+ a66:	01 c0       	rjmp	.+2      	; 0xa6a <__stack+0x16b>
+  }else{
+	  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT);
+ a68:	85 e8       	ldi	r24, 0x85	; 133
+ a6a:	80 93 bc 00 	sts	0x00BC, r24
+ a6e:	0f c0       	rjmp	.+30     	; 0xa8e <__stack+0x18f>
+ */
+void twi_reply(uint8_t ack)
+{
+  // transmit master read ready signal, with or without ack
+  if(ack){
+    TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT) | _BV(TWEA);
+ a70:	85 ec       	ldi	r24, 0xC5	; 197
+ a72:	80 93 bc 00 	sts	0x00BC, r24
+ a76:	09 c0       	rjmp	.+18     	; 0xa8a <__stack+0x18b>
+
+    // All
+    case TW_NO_INFO:   // no state information
+      break;
+    case TW_BUS_ERROR: // bus error, illegal stop/start
+      twi_error = TW_BUS_ERROR;
+ a78:	10 92 dd 01 	sts	0x01DD, r1
+ * Output   none
+ */
+void twi_stop(void)
+{
+  // send stop condition
+  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWEA) | _BV(TWINT) | _BV(TWSTO);
+ a7c:	85 ed       	ldi	r24, 0xD5	; 213
+ a7e:	80 93 bc 00 	sts	0x00BC, r24
+
+  // wait for stop condition to be exectued on bus
+  // TWINT is not set after a stop condition!
+  while(TWCR & _BV(TWSTO)){
+ a82:	80 91 bc 00 	lds	r24, 0x00BC
+ a86:	84 fd       	sbrc	r24, 4
+ a88:	fc cf       	rjmp	.-8      	; 0xa82 <__stack+0x183>
+    continue;
+  }
+
+  // update twi state
+  twi_state = TWI_READY;
+ a8a:	10 92 70 01 	sts	0x0170, r1
+    case TW_BUS_ERROR: // bus error, illegal stop/start
+      twi_error = TW_BUS_ERROR;
+      twi_stop();
+      break;
+  }
+}
+ a8e:	ff 91       	pop	r31
+ a90:	ef 91       	pop	r30
+ a92:	bf 91       	pop	r27
+ a94:	af 91       	pop	r26
+ a96:	9f 91       	pop	r25
+ a98:	8f 91       	pop	r24
+ a9a:	7f 91       	pop	r23
+ a9c:	6f 91       	pop	r22
+ a9e:	5f 91       	pop	r21
+ aa0:	4f 91       	pop	r20
+ aa2:	3f 91       	pop	r19
+ aa4:	2f 91       	pop	r18
+ aa6:	0f 90       	pop	r0
+ aa8:	0f be       	out	0x3f, r0	; 63
+ aaa:	0f 90       	pop	r0
+ aac:	1f 90       	pop	r1
+ aae:	18 95       	reti
+
+00000ab0 <twi_init>:
+ * Output   none
+ */
+void twi_init(void)
+{
+  // initialize state
+  twi_state = TWI_READY;
+ ab0:	10 92 70 01 	sts	0x0170, r1
+  twi_sendStop = true;		// default value
+ ab4:	81 e0       	ldi	r24, 0x01	; 1
+ ab6:	80 93 72 01 	sts	0x0172, r24
+  twi_inRepStart = false;
+ aba:	10 92 73 01 	sts	0x0173, r1
+  
+  // activate internal pullups for twi.
+  digitalWrite(SDA, 1);
+ abe:	82 e1       	ldi	r24, 0x12	; 18
+ ac0:	61 e0       	ldi	r22, 0x01	; 1
+ ac2:	0e 94 52 06 	call	0xca4	; 0xca4 <digitalWrite>
+  digitalWrite(SCL, 1);
+ ac6:	83 e1       	ldi	r24, 0x13	; 19
+ ac8:	61 e0       	ldi	r22, 0x01	; 1
+ aca:	0e 94 52 06 	call	0xca4	; 0xca4 <digitalWrite>
+
+  // initialize twi prescaler and bit rate
+  cbi(TWSR, TWPS0);
+ ace:	e9 eb       	ldi	r30, 0xB9	; 185
+ ad0:	f0 e0       	ldi	r31, 0x00	; 0
+ ad2:	80 81       	ld	r24, Z
+ ad4:	8e 7f       	andi	r24, 0xFE	; 254
+ ad6:	80 83       	st	Z, r24
+  cbi(TWSR, TWPS1);
+ ad8:	80 81       	ld	r24, Z
+ ada:	8d 7f       	andi	r24, 0xFD	; 253
+ adc:	80 83       	st	Z, r24
+  TWBR = ((F_CPU / TWI_FREQ) - 16) / 2;
+ ade:	88 e4       	ldi	r24, 0x48	; 72
+ ae0:	80 93 b8 00 	sts	0x00B8, r24
+  SCL Frequency = CPU Clock Frequency / (16 + (2 * TWBR))
+  note: TWBR should be 10 or higher for master mode
+  It is 72 for a 16mhz Wiring board with 100kHz TWI */
+
+  // enable twi module, acks, and twi interrupt
+  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWEA);
+ ae4:	85 e4       	ldi	r24, 0x45	; 69
+ ae6:	80 93 bc 00 	sts	0x00BC, r24
+}
+ aea:	08 95       	ret
+
+00000aec <__vector_16>:
+#if defined(__AVR_ATtiny24__) || defined(__AVR_ATtiny44__) || defined(__AVR_ATtiny84__)
+ISR(TIM0_OVF_vect)
+#else
+ISR(TIMER0_OVF_vect)
+#endif
+{
+ aec:	1f 92       	push	r1
+ aee:	0f 92       	push	r0
+ af0:	0f b6       	in	r0, 0x3f	; 63
+ af2:	0f 92       	push	r0
+ af4:	11 24       	eor	r1, r1
+ af6:	2f 93       	push	r18
+ af8:	3f 93       	push	r19
+ afa:	8f 93       	push	r24
+ afc:	9f 93       	push	r25
+ afe:	af 93       	push	r26
+ b00:	bf 93       	push	r27
+	// copy these to local variables so they can be stored in registers
+	// (volatile variables must be read from memory on every access)
+	unsigned long m = timer0_millis;
+ b02:	80 91 e2 01 	lds	r24, 0x01E2
+ b06:	90 91 e3 01 	lds	r25, 0x01E3
+ b0a:	a0 91 e4 01 	lds	r26, 0x01E4
+ b0e:	b0 91 e5 01 	lds	r27, 0x01E5
+	unsigned char f = timer0_fract;
+ b12:	30 91 e6 01 	lds	r19, 0x01E6
+
+	m += MILLIS_INC;
+ b16:	01 96       	adiw	r24, 0x01	; 1
+ b18:	a1 1d       	adc	r26, r1
+ b1a:	b1 1d       	adc	r27, r1
+	f += FRACT_INC;
+ b1c:	23 2f       	mov	r18, r19
+ b1e:	2d 5f       	subi	r18, 0xFD	; 253
+	if (f >= FRACT_MAX) {
+ b20:	2d 37       	cpi	r18, 0x7D	; 125
+ b22:	20 f0       	brcs	.+8      	; 0xb2c <__vector_16+0x40>
+		f -= FRACT_MAX;
+ b24:	2d 57       	subi	r18, 0x7D	; 125
+		m += 1;
+ b26:	01 96       	adiw	r24, 0x01	; 1
+ b28:	a1 1d       	adc	r26, r1
+ b2a:	b1 1d       	adc	r27, r1
+	}
+
+	timer0_fract = f;
+ b2c:	20 93 e6 01 	sts	0x01E6, r18
+	timer0_millis = m;
+ b30:	80 93 e2 01 	sts	0x01E2, r24
+ b34:	90 93 e3 01 	sts	0x01E3, r25
+ b38:	a0 93 e4 01 	sts	0x01E4, r26
+ b3c:	b0 93 e5 01 	sts	0x01E5, r27
+	timer0_overflow_count++;
+ b40:	80 91 de 01 	lds	r24, 0x01DE
+ b44:	90 91 df 01 	lds	r25, 0x01DF
+ b48:	a0 91 e0 01 	lds	r26, 0x01E0
+ b4c:	b0 91 e1 01 	lds	r27, 0x01E1
+ b50:	01 96       	adiw	r24, 0x01	; 1
+ b52:	a1 1d       	adc	r26, r1
+ b54:	b1 1d       	adc	r27, r1
+ b56:	80 93 de 01 	sts	0x01DE, r24
+ b5a:	90 93 df 01 	sts	0x01DF, r25
+ b5e:	a0 93 e0 01 	sts	0x01E0, r26
+ b62:	b0 93 e1 01 	sts	0x01E1, r27
+}
+ b66:	bf 91       	pop	r27
+ b68:	af 91       	pop	r26
+ b6a:	9f 91       	pop	r25
+ b6c:	8f 91       	pop	r24
+ b6e:	3f 91       	pop	r19
+ b70:	2f 91       	pop	r18
+ b72:	0f 90       	pop	r0
+ b74:	0f be       	out	0x3f, r0	; 63
+ b76:	0f 90       	pop	r0
+ b78:	1f 90       	pop	r1
+ b7a:	18 95       	reti
+
+00000b7c <delay>:
+	
+	return ((m << 8) + t) * (64 / clockCyclesPerMicrosecond());
+}
+
+void delay(unsigned long ms)
+{
+ b7c:	9b 01       	movw	r18, r22
+ b7e:	ac 01       	movw	r20, r24
+	return m;
+}
+
+unsigned long micros() {
+	unsigned long m;
+	uint8_t oldSREG = SREG, t;
+ b80:	7f b7       	in	r23, 0x3f	; 63
+	
+	cli();
+ b82:	f8 94       	cli
+	m = timer0_overflow_count;
+ b84:	80 91 de 01 	lds	r24, 0x01DE
+ b88:	90 91 df 01 	lds	r25, 0x01DF
+ b8c:	a0 91 e0 01 	lds	r26, 0x01E0
+ b90:	b0 91 e1 01 	lds	r27, 0x01E1
+#if defined(TCNT0)
+	t = TCNT0;
+ b94:	66 b5       	in	r22, 0x26	; 38
+	#error TIMER 0 not defined
+#endif
+
+  
+#ifdef TIFR0
+	if ((TIFR0 & _BV(TOV0)) && (t < 255))
+ b96:	a8 9b       	sbis	0x15, 0	; 21
+ b98:	05 c0       	rjmp	.+10     	; 0xba4 <delay+0x28>
+ b9a:	6f 3f       	cpi	r22, 0xFF	; 255
+ b9c:	19 f0       	breq	.+6      	; 0xba4 <delay+0x28>
+		m++;
+ b9e:	01 96       	adiw	r24, 0x01	; 1
+ ba0:	a1 1d       	adc	r26, r1
+ ba2:	b1 1d       	adc	r27, r1
+#else
+	if ((TIFR & _BV(TOV0)) && (t < 255))
+		m++;
+#endif
+
+	SREG = oldSREG;
+ ba4:	7f bf       	out	0x3f, r23	; 63
+	return ((m << 8) + t) * (64 / clockCyclesPerMicrosecond());
+}
+
+void delay(unsigned long ms)
+{
+	uint16_t start = (uint16_t)micros();
+ ba6:	ba 2f       	mov	r27, r26
+ ba8:	a9 2f       	mov	r26, r25
+ baa:	98 2f       	mov	r25, r24
+ bac:	88 27       	eor	r24, r24
+ bae:	86 0f       	add	r24, r22
+ bb0:	91 1d       	adc	r25, r1
+ bb2:	a1 1d       	adc	r26, r1
+ bb4:	b1 1d       	adc	r27, r1
+ bb6:	62 e0       	ldi	r22, 0x02	; 2
+ bb8:	88 0f       	add	r24, r24
+ bba:	99 1f       	adc	r25, r25
+ bbc:	aa 1f       	adc	r26, r26
+ bbe:	bb 1f       	adc	r27, r27
+ bc0:	6a 95       	dec	r22
+ bc2:	d1 f7       	brne	.-12     	; 0xbb8 <delay+0x3c>
+ bc4:	bc 01       	movw	r22, r24
+ bc6:	2d c0       	rjmp	.+90     	; 0xc22 <delay+0xa6>
+	return m;
+}
+
+unsigned long micros() {
+	unsigned long m;
+	uint8_t oldSREG = SREG, t;
+ bc8:	ff b7       	in	r31, 0x3f	; 63
+	
+	cli();
+ bca:	f8 94       	cli
+	m = timer0_overflow_count;
+ bcc:	80 91 de 01 	lds	r24, 0x01DE
+ bd0:	90 91 df 01 	lds	r25, 0x01DF
+ bd4:	a0 91 e0 01 	lds	r26, 0x01E0
+ bd8:	b0 91 e1 01 	lds	r27, 0x01E1
+#if defined(TCNT0)
+	t = TCNT0;
+ bdc:	e6 b5       	in	r30, 0x26	; 38
+	#error TIMER 0 not defined
+#endif
+
+  
+#ifdef TIFR0
+	if ((TIFR0 & _BV(TOV0)) && (t < 255))
+ bde:	a8 9b       	sbis	0x15, 0	; 21
+ be0:	05 c0       	rjmp	.+10     	; 0xbec <delay+0x70>
+ be2:	ef 3f       	cpi	r30, 0xFF	; 255
+ be4:	19 f0       	breq	.+6      	; 0xbec <delay+0x70>
+		m++;
+ be6:	01 96       	adiw	r24, 0x01	; 1
+ be8:	a1 1d       	adc	r26, r1
+ bea:	b1 1d       	adc	r27, r1
+#else
+	if ((TIFR & _BV(TOV0)) && (t < 255))
+		m++;
+#endif
+
+	SREG = oldSREG;
+ bec:	ff bf       	out	0x3f, r31	; 63
+void delay(unsigned long ms)
+{
+	uint16_t start = (uint16_t)micros();
+
+	while (ms > 0) {
+		if (((uint16_t)micros() - start) >= 1000) {
+ bee:	ba 2f       	mov	r27, r26
+ bf0:	a9 2f       	mov	r26, r25
+ bf2:	98 2f       	mov	r25, r24
+ bf4:	88 27       	eor	r24, r24
+ bf6:	8e 0f       	add	r24, r30
+ bf8:	91 1d       	adc	r25, r1
+ bfa:	a1 1d       	adc	r26, r1
+ bfc:	b1 1d       	adc	r27, r1
+ bfe:	e2 e0       	ldi	r30, 0x02	; 2
+ c00:	88 0f       	add	r24, r24
+ c02:	99 1f       	adc	r25, r25
+ c04:	aa 1f       	adc	r26, r26
+ c06:	bb 1f       	adc	r27, r27
+ c08:	ea 95       	dec	r30
+ c0a:	d1 f7       	brne	.-12     	; 0xc00 <delay+0x84>
+ c0c:	86 1b       	sub	r24, r22
+ c0e:	97 0b       	sbc	r25, r23
+ c10:	88 5e       	subi	r24, 0xE8	; 232
+ c12:	93 40       	sbci	r25, 0x03	; 3
+ c14:	c8 f2       	brcs	.-78     	; 0xbc8 <delay+0x4c>
+			ms--;
+ c16:	21 50       	subi	r18, 0x01	; 1
+ c18:	30 40       	sbci	r19, 0x00	; 0
+ c1a:	40 40       	sbci	r20, 0x00	; 0
+ c1c:	50 40       	sbci	r21, 0x00	; 0
+			start += 1000;
+ c1e:	68 51       	subi	r22, 0x18	; 24
+ c20:	7c 4f       	sbci	r23, 0xFC	; 252
+
+void delay(unsigned long ms)
+{
+	uint16_t start = (uint16_t)micros();
+
+	while (ms > 0) {
+ c22:	21 15       	cp	r18, r1
+ c24:	31 05       	cpc	r19, r1
+ c26:	41 05       	cpc	r20, r1
+ c28:	51 05       	cpc	r21, r1
+ c2a:	71 f6       	brne	.-100    	; 0xbc8 <delay+0x4c>
+		if (((uint16_t)micros() - start) >= 1000) {
+			ms--;
+			start += 1000;
+		}
+	}
+}
+ c2c:	08 95       	ret
+
+00000c2e <init>:
+
+void init()
+{
+	// this needs to be called before setup() or some functions won't
+	// work there
+	sei();
+ c2e:	78 94       	sei
+	
+	// on the ATmega168, timer 0 is also used for fast hardware pwm
+	// (using phase-correct PWM would mean that timer 0 overflowed half as often
+	// resulting in different millis() behavior on the ATmega8 and ATmega168)
+#if defined(TCCR0A) && defined(WGM01)
+	sbi(TCCR0A, WGM01);
+ c30:	84 b5       	in	r24, 0x24	; 36
+ c32:	82 60       	ori	r24, 0x02	; 2
+ c34:	84 bd       	out	0x24, r24	; 36
+	sbi(TCCR0A, WGM00);
+ c36:	84 b5       	in	r24, 0x24	; 36
+ c38:	81 60       	ori	r24, 0x01	; 1
+ c3a:	84 bd       	out	0x24, r24	; 36
+	// this combination is for the standard atmega8
+	sbi(TCCR0, CS01);
+	sbi(TCCR0, CS00);
+#elif defined(TCCR0B) && defined(CS01) && defined(CS00)
+	// this combination is for the standard 168/328/1280/2560
+	sbi(TCCR0B, CS01);
+ c3c:	85 b5       	in	r24, 0x25	; 37
+ c3e:	82 60       	ori	r24, 0x02	; 2
+ c40:	85 bd       	out	0x25, r24	; 37
+	sbi(TCCR0B, CS00);
+ c42:	85 b5       	in	r24, 0x25	; 37
+ c44:	81 60       	ori	r24, 0x01	; 1
+ c46:	85 bd       	out	0x25, r24	; 37
+
+	// enable timer 0 overflow interrupt
+#if defined(TIMSK) && defined(TOIE0)
+	sbi(TIMSK, TOIE0);
+#elif defined(TIMSK0) && defined(TOIE0)
+	sbi(TIMSK0, TOIE0);
+ c48:	ee e6       	ldi	r30, 0x6E	; 110
+ c4a:	f0 e0       	ldi	r31, 0x00	; 0
+ c4c:	80 81       	ld	r24, Z
+ c4e:	81 60       	ori	r24, 0x01	; 1
+ c50:	80 83       	st	Z, r24
+	// this is better for motors as it ensures an even waveform
+	// note, however, that fast pwm mode can achieve a frequency of up
+	// 8 MHz (with a 16 MHz clock) at 50% duty cycle
+
+#if defined(TCCR1B) && defined(CS11) && defined(CS10)
+	TCCR1B = 0;
+ c52:	e1 e8       	ldi	r30, 0x81	; 129
+ c54:	f0 e0       	ldi	r31, 0x00	; 0
+ c56:	10 82       	st	Z, r1
+
+	// set timer 1 prescale factor to 64
+	sbi(TCCR1B, CS11);
+ c58:	80 81       	ld	r24, Z
+ c5a:	82 60       	ori	r24, 0x02	; 2
+ c5c:	80 83       	st	Z, r24
+#if F_CPU >= 8000000L
+	sbi(TCCR1B, CS10);
+ c5e:	80 81       	ld	r24, Z
+ c60:	81 60       	ori	r24, 0x01	; 1
+ c62:	80 83       	st	Z, r24
+	sbi(TCCR1, CS10);
+#endif
+#endif
+	// put timer 1 in 8-bit phase correct pwm mode
+#if defined(TCCR1A) && defined(WGM10)
+	sbi(TCCR1A, WGM10);
+ c64:	e0 e8       	ldi	r30, 0x80	; 128
+ c66:	f0 e0       	ldi	r31, 0x00	; 0
+ c68:	80 81       	ld	r24, Z
+ c6a:	81 60       	ori	r24, 0x01	; 1
+ c6c:	80 83       	st	Z, r24
+
+	// set timer 2 prescale factor to 64
+#if defined(TCCR2) && defined(CS22)
+	sbi(TCCR2, CS22);
+#elif defined(TCCR2B) && defined(CS22)
+	sbi(TCCR2B, CS22);
+ c6e:	e1 eb       	ldi	r30, 0xB1	; 177
+ c70:	f0 e0       	ldi	r31, 0x00	; 0
+ c72:	80 81       	ld	r24, Z
+ c74:	84 60       	ori	r24, 0x04	; 4
+ c76:	80 83       	st	Z, r24
+
+	// configure timer 2 for phase correct pwm (8-bit)
+#if defined(TCCR2) && defined(WGM20)
+	sbi(TCCR2, WGM20);
+#elif defined(TCCR2A) && defined(WGM20)
+	sbi(TCCR2A, WGM20);
+ c78:	e0 eb       	ldi	r30, 0xB0	; 176
+ c7a:	f0 e0       	ldi	r31, 0x00	; 0
+ c7c:	80 81       	ld	r24, Z
+ c7e:	81 60       	ori	r24, 0x01	; 1
+ c80:	80 83       	st	Z, r24
+#if defined(ADCSRA)
+	// set a2d prescale factor to 128
+	// 16 MHz / 128 = 125 KHz, inside the desired 50-200 KHz range.
+	// XXX: this will not work properly for other clock speeds, and
+	// this code should use F_CPU to determine the prescale factor.
+	sbi(ADCSRA, ADPS2);
+ c82:	ea e7       	ldi	r30, 0x7A	; 122
+ c84:	f0 e0       	ldi	r31, 0x00	; 0
+ c86:	80 81       	ld	r24, Z
+ c88:	84 60       	ori	r24, 0x04	; 4
+ c8a:	80 83       	st	Z, r24
+	sbi(ADCSRA, ADPS1);
+ c8c:	80 81       	ld	r24, Z
+ c8e:	82 60       	ori	r24, 0x02	; 2
+ c90:	80 83       	st	Z, r24
+	sbi(ADCSRA, ADPS0);
+ c92:	80 81       	ld	r24, Z
+ c94:	81 60       	ori	r24, 0x01	; 1
+ c96:	80 83       	st	Z, r24
+
+	// enable a2d conversions
+	sbi(ADCSRA, ADEN);
+ c98:	80 81       	ld	r24, Z
+ c9a:	80 68       	ori	r24, 0x80	; 128
+ c9c:	80 83       	st	Z, r24
+	// here so they can be used as normal digital i/o; they will be
+	// reconnected in Serial.begin()
+#if defined(UCSRB)
+	UCSRB = 0;
+#elif defined(UCSR0B)
+	UCSR0B = 0;
+ c9e:	10 92 c1 00 	sts	0x00C1, r1
+#endif
+}
+ ca2:	08 95       	ret
+
+00000ca4 <digitalWrite>:
+	}
+}
+
+void digitalWrite(uint8_t pin, uint8_t val)
+{
+	uint8_t timer = digitalPinToTimer(pin);
+ ca4:	48 2f       	mov	r20, r24
+ ca6:	50 e0       	ldi	r21, 0x00	; 0
+ ca8:	ca 01       	movw	r24, r20
+ caa:	82 55       	subi	r24, 0x52	; 82
+ cac:	9f 4f       	sbci	r25, 0xFF	; 255
+ cae:	fc 01       	movw	r30, r24
+ cb0:	24 91       	lpm	r18, Z+
+	uint8_t bit = digitalPinToBitMask(pin);
+ cb2:	ca 01       	movw	r24, r20
+ cb4:	86 56       	subi	r24, 0x66	; 102
+ cb6:	9f 4f       	sbci	r25, 0xFF	; 255
+ cb8:	fc 01       	movw	r30, r24
+ cba:	94 91       	lpm	r25, Z+
+	uint8_t port = digitalPinToPort(pin);
+ cbc:	4a 57       	subi	r20, 0x7A	; 122
+ cbe:	5f 4f       	sbci	r21, 0xFF	; 255
+ cc0:	fa 01       	movw	r30, r20
+ cc2:	34 91       	lpm	r19, Z+
+	volatile uint8_t *out;
+
+	if (port == NOT_A_PIN) return;
+ cc4:	33 23       	and	r19, r19
+ cc6:	09 f4       	brne	.+2      	; 0xcca <digitalWrite+0x26>
+ cc8:	40 c0       	rjmp	.+128    	; 0xd4a <digitalWrite+0xa6>
+
+	// If the pin that support PWM output, we need to turn it off
+	// before doing a digital write.
+	if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+ cca:	22 23       	and	r18, r18
+ ccc:	51 f1       	breq	.+84     	; 0xd22 <digitalWrite+0x7e>
+//
+//static inline void turnOffPWM(uint8_t timer) __attribute__ ((always_inline));
+//static inline void turnOffPWM(uint8_t timer)
+static void turnOffPWM(uint8_t timer)
+{
+	switch (timer)
+ cce:	23 30       	cpi	r18, 0x03	; 3
+ cd0:	71 f0       	breq	.+28     	; 0xcee <digitalWrite+0x4a>
+ cd2:	24 30       	cpi	r18, 0x04	; 4
+ cd4:	28 f4       	brcc	.+10     	; 0xce0 <digitalWrite+0x3c>
+ cd6:	21 30       	cpi	r18, 0x01	; 1
+ cd8:	a1 f0       	breq	.+40     	; 0xd02 <digitalWrite+0x5e>
+ cda:	22 30       	cpi	r18, 0x02	; 2
+ cdc:	11 f5       	brne	.+68     	; 0xd22 <digitalWrite+0x7e>
+ cde:	14 c0       	rjmp	.+40     	; 0xd08 <digitalWrite+0x64>
+ ce0:	26 30       	cpi	r18, 0x06	; 6
+ ce2:	b1 f0       	breq	.+44     	; 0xd10 <digitalWrite+0x6c>
+ ce4:	27 30       	cpi	r18, 0x07	; 7
+ ce6:	c1 f0       	breq	.+48     	; 0xd18 <digitalWrite+0x74>
+ ce8:	24 30       	cpi	r18, 0x04	; 4
+ cea:	d9 f4       	brne	.+54     	; 0xd22 <digitalWrite+0x7e>
+ cec:	04 c0       	rjmp	.+8      	; 0xcf6 <digitalWrite+0x52>
+	{
+		#if defined(TCCR1A) && defined(COM1A1)
+		case TIMER1A:   cbi(TCCR1A, COM1A1);    break;
+ cee:	80 91 80 00 	lds	r24, 0x0080
+ cf2:	8f 77       	andi	r24, 0x7F	; 127
+ cf4:	03 c0       	rjmp	.+6      	; 0xcfc <digitalWrite+0x58>
+		#endif
+		#if defined(TCCR1A) && defined(COM1B1)
+		case TIMER1B:   cbi(TCCR1A, COM1B1);    break;
+ cf6:	80 91 80 00 	lds	r24, 0x0080
+ cfa:	8f 7d       	andi	r24, 0xDF	; 223
+ cfc:	80 93 80 00 	sts	0x0080, r24
+ d00:	10 c0       	rjmp	.+32     	; 0xd22 <digitalWrite+0x7e>
+		#if defined(TCCR2) && defined(COM21)
+		case  TIMER2:   cbi(TCCR2, COM21);      break;
+		#endif
+		
+		#if defined(TCCR0A) && defined(COM0A1)
+		case  TIMER0A:  cbi(TCCR0A, COM0A1);    break;
+ d02:	84 b5       	in	r24, 0x24	; 36
+ d04:	8f 77       	andi	r24, 0x7F	; 127
+ d06:	02 c0       	rjmp	.+4      	; 0xd0c <digitalWrite+0x68>
+		#endif
+		
+		#if defined(TIMER0B) && defined(COM0B1)
+		case  TIMER0B:  cbi(TCCR0A, COM0B1);    break;
+ d08:	84 b5       	in	r24, 0x24	; 36
+ d0a:	8f 7d       	andi	r24, 0xDF	; 223
+ d0c:	84 bd       	out	0x24, r24	; 36
+ d0e:	09 c0       	rjmp	.+18     	; 0xd22 <digitalWrite+0x7e>
+		#endif
+		#if defined(TCCR2A) && defined(COM2A1)
+		case  TIMER2A:  cbi(TCCR2A, COM2A1);    break;
+ d10:	80 91 b0 00 	lds	r24, 0x00B0
+ d14:	8f 77       	andi	r24, 0x7F	; 127
+ d16:	03 c0       	rjmp	.+6      	; 0xd1e <digitalWrite+0x7a>
+		#endif
+		#if defined(TCCR2A) && defined(COM2B1)
+		case  TIMER2B:  cbi(TCCR2A, COM2B1);    break;
+ d18:	80 91 b0 00 	lds	r24, 0x00B0
+ d1c:	8f 7d       	andi	r24, 0xDF	; 223
+ d1e:	80 93 b0 00 	sts	0x00B0, r24
+
+	// If the pin that support PWM output, we need to turn it off
+	// before doing a digital write.
+	if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+
+	out = portOutputRegister(port);
+ d22:	e3 2f       	mov	r30, r19
+ d24:	f0 e0       	ldi	r31, 0x00	; 0
+ d26:	ee 0f       	add	r30, r30
+ d28:	ff 1f       	adc	r31, r31
+ d2a:	ee 58       	subi	r30, 0x8E	; 142
+ d2c:	ff 4f       	sbci	r31, 0xFF	; 255
+ d2e:	a5 91       	lpm	r26, Z+
+ d30:	b4 91       	lpm	r27, Z+
+
+	uint8_t oldSREG = SREG;
+ d32:	2f b7       	in	r18, 0x3f	; 63
+	cli();
+ d34:	f8 94       	cli
+
+	if (val == LOW) {
+ d36:	66 23       	and	r22, r22
+ d38:	21 f4       	brne	.+8      	; 0xd42 <digitalWrite+0x9e>
+		*out &= ~bit;
+ d3a:	8c 91       	ld	r24, X
+ d3c:	90 95       	com	r25
+ d3e:	89 23       	and	r24, r25
+ d40:	02 c0       	rjmp	.+4      	; 0xd46 <digitalWrite+0xa2>
+	} else {
+		*out |= bit;
+ d42:	8c 91       	ld	r24, X
+ d44:	89 2b       	or	r24, r25
+ d46:	8c 93       	st	X, r24
+	}
+
+	SREG = oldSREG;
+ d48:	2f bf       	out	0x3f, r18	; 63
+ d4a:	08 95       	ret
+
+00000d4c <main>:
+#include <Arduino.h>
+
+int main(void)
+ d4c:	cf 93       	push	r28
+ d4e:	df 93       	push	r29
+{
+	init();
+ d50:	0e 94 17 06 	call	0xc2e	; 0xc2e <init>
+
+#if defined(USBCON)
+	USBDevice.attach();
+#endif
+	
+	setup();
+ d54:	0e 94 a1 00 	call	0x142	; 0x142 <setup>
+    
+	for (;;) {
+		loop();
+		if (serialEventRun) serialEventRun();
+ d58:	c0 e0       	ldi	r28, 0x00	; 0
+ d5a:	d0 e0       	ldi	r29, 0x00	; 0
+#endif
+	
+	setup();
+    
+	for (;;) {
+		loop();
+ d5c:	0e 94 8c 00 	call	0x118	; 0x118 <loop>
+		if (serialEventRun) serialEventRun();
+ d60:	20 97       	sbiw	r28, 0x00	; 0
+ d62:	e1 f3       	breq	.-8      	; 0xd5c <main+0x10>
+ d64:	0e 94 00 00 	call	0	; 0x0 <__heap_end>
+ d68:	f9 cf       	rjmp	.-14     	; 0xd5c <main+0x10>
+
+00000d6a <__udivmodqi4>:
+ d6a:	99 1b       	sub	r25, r25
+ d6c:	79 e0       	ldi	r23, 0x09	; 9
+ d6e:	04 c0       	rjmp	.+8      	; 0xd78 <__udivmodqi4_ep>
+
+00000d70 <__udivmodqi4_loop>:
+ d70:	99 1f       	adc	r25, r25
+ d72:	96 17       	cp	r25, r22
+ d74:	08 f0       	brcs	.+2      	; 0xd78 <__udivmodqi4_ep>
+ d76:	96 1b       	sub	r25, r22
+
+00000d78 <__udivmodqi4_ep>:
+ d78:	88 1f       	adc	r24, r24
+ d7a:	7a 95       	dec	r23
+ d7c:	c9 f7       	brne	.-14     	; 0xd70 <__udivmodqi4_loop>
+ d7e:	80 95       	com	r24
+ d80:	08 95       	ret
+
+00000d82 <__tablejump2__>:
+ d82:	ee 0f       	add	r30, r30
+ d84:	ff 1f       	adc	r31, r31
+
+00000d86 <__tablejump__>:
+ d86:	05 90       	lpm	r0, Z+
+ d88:	f4 91       	lpm	r31, Z+
+ d8a:	e0 2d       	mov	r30, r0
+ d8c:	09 94       	ijmp
+
+00000d8e <_exit>:
+ d8e:	f8 94       	cli
+
+00000d90 <__stop_program>:
+ d90:	ff cf       	rjmp	.-2      	; 0xd90 <__stop_program>

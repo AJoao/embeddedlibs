@@ -1,0 +1,10 @@
+I2CDisplay	KEYWORD1
+
+pullUp	KEYWORD2
+writeGPIOAB	KEYWORD2
+readGPIOAB	KEYWORD2
+setLeftDigit KEYWORD2
+setRightDigit KEYWORD2
+setValue KEYWORD2
+setLeftDecimal KEYWORD2
+setRightDecimal KEYWORD2
