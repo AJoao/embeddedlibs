@@ -5,9 +5,14 @@ A wrapper class for containing different kinds of Serial
 object to provide a single standard class interface to them
 all.
 
-#include <AbstractSerial.h> for USB and Hardware serial.
-#include <AbstractSerial_software.h> for USB, Hardware and Software serial.  Also
-requires #include <SoftwareSerial.h>
+For USB and Hardware serial:
+
+    #include <AbstractSerial.h>
+
+For USB, Hardware and Software serial:
+
+    #include <SoftwareSerial.h>
+    #include <AbstractSerial_software.h>
 
 Create an AbstractedSerial copy of a normal serial port:
 
