@@ -18,7 +18,7 @@ Create an AbstractedSerial copy of a normal serial port:
 
     AbstractedSerial mySerial(&Serial);
 
-Can also include an "activation" line to monitor for connection/disconnaction - useful for
+Can also include an "activation" line to monitor for connection/disconnection - useful for
 bluetooth modules that provide a paired signal
 
     AbstractedSerial mySerial(&Serial2, 3);
