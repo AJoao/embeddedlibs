@@ -27,7 +27,7 @@ All normal Serial methods are available:
 
     mySerial.begin(9600);
 
-    while(mySerial.availabl() > 0) {
+    while(mySerial.available() > 0) {
         mySerial.print(mySerial.read(), HEX);
     }
 
