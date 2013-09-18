@@ -45,7 +45,7 @@ void PWMAudio::ampOff()
 void PWMAudio::begin()
 {
 	T4CONbits.TCKPS = 0b111; // 1:256
-	PR4 = (80000000 / 256) / this->sampleRate;
+	PR4 = (F_CPU / 256) / this->sampleRate;
 
 	IPC4bits.T4IP = 5;
 	IFS0bits.T4IF = 0;
